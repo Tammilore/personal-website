@@ -28,25 +28,25 @@ const apps: AppProps[] = [
   {
     name: 'Superlight',
     description: 'A lightweight platform for running recurring syncs.',
-    image: '/apps/superlight.png',
+    image: '/apps/superlight.svg',
     link: '#',
   },
   {
     name: 'texts.run',
     description: 'A simple, messenger-style webpage builder.',
-    image: '/apps/texts.png',
+    image: '/apps/texts.svg',
     link: '#',
   },
   {
     name: 'Waitlist',
     description: 'Fast, unbranded waitlists for developers.',
-    image: '/apps/waitlist.png',
+    image: '/apps/waitlist.svg',
     link: '#',
   },
   {
     name: 'Vercel for VS Code',
     description: 'A VS Code extension for Vercel deployment status.',
-    image: '/apps/vercel.png',
+    image: '/apps/vercel.svg',
     link: '#',
   },
 ];
