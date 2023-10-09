@@ -9,7 +9,7 @@ An active class wrapper is a way to add a special class to an HTML element when 
 
 Let's say we have a `Navbar` component that renders a list of links. We want to add an active class to the link that matches the current page. This is easy enough to do with a client component, but what if we want to use a server component? We can't use the `usePathname` hook, which is a client-side hook, in a server component. We don't want to turn the `Navbar` into a client component either as we want to maintain the benefits of server components, such as SEO and performance.
 
-![Example](/images/blog/currentPageProvider.png)
+![Example](/blog/currentPageProvider.png)
 
 Let's explore how we can solve this.
 

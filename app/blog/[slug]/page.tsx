@@ -54,7 +54,7 @@ const DocPage: FC<DocPageProps> = ({ params }) => {
   }
 
   return (
-    <>
+    <div className="flex flex-col gap-8">
       <div>
         <div className="relative">
           <Link
@@ -88,7 +88,7 @@ const DocPage: FC<DocPageProps> = ({ params }) => {
       <div>
         <Mdx code={doc.body.code} />
       </div>
-    </>
+    </div>
   );
 };
 
