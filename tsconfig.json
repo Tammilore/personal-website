@@ -14,13 +14,15 @@
     "jsx": "preserve",
     "incremental": true,
     "strictNullChecks": true,
+    "baseUrl": ".",
     "plugins": [
       {
         "name": "next"
       }
     ],
     "paths": {
-      "@/*": ["./*"]
+      "@/*": ["./*"],
+      "@contentlayer/generated": ["./.contentlayer/generated"]
     }
   },
   "include": [
