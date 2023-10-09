@@ -2,17 +2,16 @@
 
 import { useState } from 'react';
 import { parseError } from '@/lib/error';
-import type { FC, FormEventHandler } from 'react';
-import { isValidEmail } from '@/lib/email';
+import { isValidEmail } from '@/lib/utils';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { useToast } from '@/components/ui/use-toast';
+import type { FC, FormEventHandler } from 'react';
 
 const domain = 'app.loops.so';
-const userGroup = 'Waitlist';
 const formId = 'clmnqcb4e024xma0or3stgrkd';
 
-export const Waitlist: FC = () => {
+export const MailingList: FC = () => {
   const [email, setEmail] = useState('');
   const [disabled, setDisabled] = useState(false);
   const { toast } = useToast();
@@ -45,7 +44,6 @@ export const Waitlist: FC = () => {
       }
 
       const formBody = new URLSearchParams({
-        userGroup,
         email,
       });
 
@@ -90,7 +88,7 @@ export const Waitlist: FC = () => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="flex items-center gap-2 max-w-lg w-full"
+      className="flex items-center gap-2 max-w-sm w-full"
     >
       <Input
         type="text"
@@ -99,9 +97,13 @@ export const Waitlist: FC = () => {
         value={email}
         onChange={({ target }) => setEmail(target.value)}
         required
-        className="bg-white dark:bg-zinc-900"
+        className="bg-white dark:bg-neutral-900"
       />
-      <Button type="submit" className="shrink-0" disabled={disabled}>
+      <Button
+        type="submit"
+        className="shrink-0"
+        disabled={disabled || !email.trim() || !isValidEmail(email)}
+      >
         {disabled ? 'Please wait...' : 'Join the mailing list'}
       </Button>
     </form>

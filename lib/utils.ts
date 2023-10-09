@@ -10,3 +10,5 @@ export const toJsonLd = <T extends Thing>(
 ): string => `<script type="application/ld+json">
 ${JSON.stringify(json, null, 2)}
 </script>`;
+
+export const isValidEmail = (email: string): boolean => /.+@.+/u.test(email);
