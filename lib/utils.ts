@@ -1,5 +1,6 @@
 import { clsx } from 'clsx';
 import { twMerge } from 'tailwind-merge';
+import type { Blog } from '@/.contentlayer/generated';
 import type { Thing, WithContext } from 'schema-dts';
 import type { ClassValue } from 'clsx';
 
@@ -12,3 +13,16 @@ ${JSON.stringify(json, null, 2)}
 </script>`;
 
 export const isValidEmail = (email: string): boolean => /.+@.+/u.test(email);
+
+export const formatDate = (date: string): string =>
+  new Intl.DateTimeFormat('en-US', {
+    month: 'short',
+    day: 'numeric',
+    year: 'numeric',
+    timeZone: 'America/New_York',
+  }).format(new Date(date));
+
+export const sortBlogPostByDate = (blogPostA: Blog, blogPostB: Blog): number =>
+  new Date(blogPostB.date).getTime() > new Date(blogPostA.date).getTime()
+    ? 1
+    : -1;

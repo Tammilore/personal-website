@@ -3,6 +3,7 @@ import { Intro } from './components/intro';
 import { Hero } from './components/hero';
 import { Apps } from './components/apps';
 import { Projects } from './components/projects';
+import { Blog } from './components/blog';
 import type { FC } from 'react';
 
 const Home: FC = () => (
@@ -12,6 +13,7 @@ const Home: FC = () => (
     <Work />
     <Apps />
     <Projects />
+    <Blog />
   </>
 );
 

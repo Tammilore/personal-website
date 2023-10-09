@@ -3,5 +3,6 @@
 @tailwind utilities;
 
 html {
+  letter-spacing: -0.01rem;
   text-rendering: optimizelegibility;
 }

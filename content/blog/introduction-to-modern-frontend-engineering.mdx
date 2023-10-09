@@ -1,0 +1,268 @@
+---
+title: A Brief Introduction to Modern Frontend Engineering
+description: A high-level overview on the tools and technologies in frontend engineering... without getting too technical.
+date: 01-26-2023
+image: /blog/introduction-to-modern-frontend-engineering.jpg
+---
+
+## Introduction
+
+Frontend engineering is the practice of building the user-facing part of a website or application. This is the part of the program that people see and interact with when they visit a website or use an app.
+
+My goal for this post is to distill the complex mess that is modern frontend engineering into a single blog post that is easy to understand and digest for anyone. I'm writing this for someone who is not an engineer, so you don't need to be a developer to follow along. I'll aim to explain everything in plain English, and I'll try to keep the technical jargon to a minimum until we get to the more advanced topics.
+
+## What is Frontend Engineering?
+
+Frontend engineering is essentially the practice of building the user-facing part of a website or application. The frontend controls the look and functionality, and determines how the visiting user experiences and interacts with, the site or app.
+
+![Example of frontend code](https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80)
+
+We call the user-facing part of a website or application the frontend because it is the part of the technology that is in front of the user. There's also the backend, which is the part of the technology not visible to the user - the servers, databases, and other systems that make the website or application work. Sometimes we also have a third layer between the frontend and the backend, acting as a communication layer. We tend to call this middleware.
+
+![Stack](/images/blog/stack.svg)
+
+These various technologies and layers are all connected together to form a complete system and run on web technologies, which are powered by... the internet.
+
+## The Internet
+
+The internet is a vast network of connections, like a web of threads woven together by unseen hands (illuminati confirmed). It spans the globe, connecting people, machines, and information in a never-ending dance of data. At its core, the internet is built on a simple idea: the sharing of information. Every time we send an email, post a photo, or watch a video, we are contributing to this great tapestry of knowledge.
+
+In reality, [the internet](https://www.vox.com/2014/6/16/18076282/the-internet) is comprised of a network of high-speed cables and servers that span the Earth. These cables and servers act as gatekeepers, directing the flow of data from one place to another. Data (i.e. digital information) travels through these networks to reach different websites and online platforms. This data is sent and received through a series of wires, cables, and satellites that make up the global infrastructure of the internet.
+
+![The internet is a network of networks](https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2972&q=80)
+
+The internet is decentralized, meaning it is not owned by any one person or company, and is not controlled by any one government... in Western countries anyway. These computers can communicate with each other and share information. When you use the internet, your computer sends a request for information to a server, which is a computer that stores and delivers the information. The server then sends the information back to your computer, where it can be displayed on your screen.
+
+The internet is constantly growing and changing. New websites and online platforms are constantly being created, and existing ones are constantly being updated or destroyed. This constant evolution allows for the internet to remain relevant and useful. Such is the ebb and flow of entropy in an ever-changing digital universe.
+
+Once we understand how the web works, we can start building new things in our own image.
+
+## Internet Browsers
+
+The internet is a vast universe filled with an endless amount of information, just waiting to be explored. In order to navigate it and access this information, we use internet browsers. A browser is made up of two main components: a user interface (UI) and something called a [rendering engine](https://www.browserstack.com/guide/browser-rendering-engine).
+
+The UI is the part of the browser you're likely already familiar with — the part with the address bar, back and forward buttons and bookmarks. These look and feel different depending on the browser you're using, but they all have the same basic functionality. The rendering engine is the part of the browser under the hood that turns the code of a website into something you can actually see and interact with - a visual manifestation of the frontend code.
+
+![Google Chrome](https://images.unsplash.com/photo-1616499370260-485b3e5ed653?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80)
+
+Internet browsers connect to websites and web applications through various protocols and standards. The one that you're most likely familiar with is HTTP. They use [URLs](/blog/a-quick-introduction-to-urls) to find and connect to websites on the internet. URLs are like coordinates for websites.
+
+As a frontend engineer, this rendering engine is your digital playground and to create things, you'll need to know three core languages.
+
+## Languages
+
+The Frontend of every website or web application on the internet is made up of only 3 languages: HTML, CSS and JS. They are the tools that shape and mold the modern web and bring form and function to the internet.
+
+[HTML](https://html.com/) stands for "**H**yper**T**ext **M**arkup **L**anguage". It's a coding language that describes the structure or skeleton of a website. It tells the browser where to put all the different parts of the website, like the text, pictures, and links. While HTML is fairly straightforward, there are some intricacies such as [semantics](https://developer.mozilla.org/en-US/docs/Glossary/Semantics), [forms](https://web.dev/learn/forms/), [best practices](https://github.com/hail2u/html-best-practices) and [accessibility](https://web.dev/learn/accessibility/), which we'll discuss more later. HTML looks like this, with the tags wrapped in angle brackets:
+
+```html
+<h1>My Website</h1>
+<p>This is my website.</p>
+<a href="https://www.google.com">Link to Google</a>
+```
+
+[CSS](https://www.youtube.com/watch?v=n4R2E7O-Ngo) stands for **C**ascading **S**tyle **S**heets. It's like the paint and decor for a website. CSS is used to make a website look the way you want it to look — it allows you to change the colors, font, spacing and layout of a website. You can also add animations and other effects to make a website more dynamic and interactive, as well as make it adapt to [different screen sizes](https://web.dev/learn/design/) when you resize the page. There are many methodologies to writing CSS that is easier to maintain as it grows in size (like [Bem](https://en.bem.info/methodology/quick-start/), [OOCSS](https://www.smashingmagazine.com/2011/12/an-introduction-to-object-oriented-css-oocss/) and [SMACSS](https://smacss.com/)), many tools to help you write CSS faster (like [Tailwind](https://tailwindcss.com/)) and many ways to write CSS (like [CSS in JS](https://cssinjs.org/), [CSS Modules](https://css-tricks.com/css-modules-part-1-need/) and [Styled Components](https://styled-components.com/)). CSS can be tricky even for the most apt of traditional engineers as it's where design and code intertwine. CSS looks like this, with the selectors wrapped in curly brackets:
+
+```css
+h1 {
+  color: red;
+  font-size: 24px;
+}
+```
+
+[JS](https://www.scaler.com/topics/course/javascript-beginners/) stands for **J**ava**S**cript (NOT the same as [Java](https://www.java.com/en/) btw). It's a coding language that makes websites interactive and dynamic. It's like the magic that makes a website come alive! JavaScript is by far the most complex of the three languages, but you can do so much with it. Many modern applications are built almost purely on JavaScript. JavaScript is way too complex to cover in a single blog post, but I will say it's also known as ECMAScript and comes in many [versions](https://www.youtube.com/watch?v=nZ1DMMsyVyI). So if you see JavaScript referred to as ES6 or ES7, that's what it means. If you're already familiar with JavaScript and want to master your mental model of it, I highly recommend Dan Abramov's [Just JavaScript](https://justjavascript.com/). JavaScript looks like this, with curly braces, semicolons and parentheses:
+
+```js
+function sayHello() {
+  console.log('Hello!');
+}
+```
+
+By the way, you may have noticed that the code examples above use different colors for different parts of the code. This is called "syntax highlighting" — it's a feature that's built into most code editors and makes it much easier to read code.
+
+## Hosting
+
+Web hosting is like renting a space on the internet for your website, your own personal corner the internet.
+
+During the development process, you'll likely be using a "local" environment. This means that the website you're building is only available on your computer, at a URL like `http://localhost:3000`. It's not accessible to anyone else on the internet. If you're building a PHP website, you'll need to install a local server like XAMPP or MAMP to run your website locally. If you're building a simple JavaScript-based website, you'll be able to run your website locally without needing to install a local server. We'll cover this in more detail later.
+
+Once you're ready to make your website live, you'll need to host it on a server. You can either host it on a server that you own (called self-hosting) or you can host it on a server that someone else owns (called cloud hosting). The term "cloud" refers to servers in data centers all over the world, commonly from companies like [Amazon](https://aws.amazon.com/), [Google](https://cloud.google.com/) and [Microsoft](https://azure.microsoft.com/en-us/). These servers live in data centers like this:
+
+![A data center](https://images.unsplash.com/photo-1506399558188-acca6f8cbf41?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1946&q=80)
+
+Nowadays, cloud hosting is the most common. The type of hosting you'll need depends largely on your "stack" (the technology you've chosen to build your website with). For example, if you're building something older a [Wordpress](https://wordpress.org/) website, you'll need a full-on server to host it, like with [Digital Ocean](https://www.digitalocean.com/) or [Linode](https://www.linode.com/). If you're building something more modern like a [Next.js](https://nextjs.org/) app though, you can use something called "static" hosting instead, like [Vercel](https://vercel.com/) or [Netlify](https://www.netlify.com/). This is because of the difference in the rendering process, which we'll talk about next.
+
+## Types of rendering
+
+We talked before about the rendering engine in a browser, and how it takes HTML, CSS and JS and turns it into a website. But there are [a few ways](https://www.toptal.com/front-end/client-side-vs-server-side-pre-rendering) that this process can actually happen. This is what we call "rendering" - the process of transforming code into its visual representation.
+
+The most common ones rendering methods are server-side rendering, client-side rendering, and static site generation. Older websites are usually built with server-side rendering only, while newer websites are usually built with a combination of all three depending on the use case.
+
+**Server-Side Rendering** is when the server renders the HTML and sends it to the browser. This is the most common way to render websites. It's also the slowest way to render websites because the server has to render the HTML for every page request, which can be slow if the website is large and complex.
+
+**Client-Side Rendering** is when the browser renders the HTML. This is the fastest way to render websites because the browser only has to render the HTML for the current page. It's also the most resource-efficient for the engineer as the majority of the processing is done on the client's browser. However, it's not super great for marketing websites because search engines can't crawl the content of the website (because it hasn't been rendered yet).
+
+**Static Site Generation** is when the server renders the HTML and sends it to the browser, but it's only done once. This is the fastest way to render websites because the server only has to render the HTML once, and then it can be cached and served to the browser. It's also the most resource-efficient for the engineer as all the processing is done only once. However, it's not super great for dynamic websites because the HTML can't be updated without re-rendering the entire website.
+
+Frameworks like [Next.js](https://nextjs.org/) and [Gatsby](https://www.gatsbyjs.com/) allow you to build websites with a combination of all three rendering methods, picking the best one for each page depending on the use case, the type of content on the page and how it's built.
+
+## Libraries and Frameworks
+
+Libraries are like sets of tools that people have made to help make using JavaScript easier and more efficient. There are an unbelievable amount of JavaScript libraries out there, all fit to help you build different things. For example, there's [React](https://reactjs.org/), which is a library for building user interfaces, and [D3](https://d3js.org/), which is a library for building data visualizations. There are also libraries for building [games](https://www.babylonjs.com/), [animations](https://animejs.com/) and even [music](https://tonejs.github.io/).
+
+Frameworks are like pre-built structures or approaches that developers can use as a foundation to build their own web applications or sites. These frameworks provide a set of rules, tools, and pre-written code that developers can use to make their work more efficient and organized. There are many JavaScript frameworks available, but some of the most popular ones include [Next.js](https://nextjs.org/), [Gatsby](https://www.gatsbyjs.com/), [SvelteKit](https://kit.svelte.dev/) and [Remix](https://remix.run/). Each framework has its own set of rules and tools, and they're all used to build different types of websites and applications.
+
+The key difference between libraries and frameworks is that libraries are used to help you build specific things, whereas frameworks are used to help you build entire applications. For example, React is a library that you can use to build the UI of a website, but Next.js is a framework that you can use to structure the entire website. It uses React for the UI, but also handles things like data fetching, routing, rendering and more.
+
+## Packages
+
+When we build modern web applications, I mentioned previously that we like to use libraries to help us achieve complex tasks with ease. The idea is that we can abstract away the complexity of a particular task into a seperate file that we can import into our application. This is a great way to keep our code clean and organized, but it also means we can re-use it in multiple places.
+
+Building on this, we can also use libraries that other people have written to help us achieve tasks that we might not have the time or expertise to do ourselves. This is where the concept of packages comes in.
+
+A package is a collection of code that someone else has written that we can import into our application. By leveraging the work of others to help us achieve our goals, we can build more complex applications faster. If it sounds similar to a library, that's because it is. The difference is that a library is simply the code itself, whereas a package takes that code, bundles it up and made available for us to install easily.
+
+![NPM](/images/blog/frontend-npm.png)
+
+For example, [React](https://reactjs.org/) is a library that we can import into our application to help us build user interfaces. You can find the package for React on [NPM](https://www.npmjs.com/package/react), JavaScript's (technically Node.js') default [package manager](https://nodesource.com/blog/an-absolute-beginners-guide-to-using-npm/). NPM will fetch the package and install it into our application, and then we can import it into our code.
+
+I'd love to tell you NPM stands for "Node Package Manager" and make this whole thing easy, however NPM is a [pseudo-acronym](https://en.wikipedia.org/wiki/Acronym#Pseudo-acronyms) and doesn't actually stand for anything. NPM are aware of how confusing this is and even have [made a page](https://github.com/npm/npm-expansions) to make fun of this fact. Anyway, NPM is comprised of two things.
+
+1. A command line tool that we can use to install packages and manage your dependencies. If you're not familiar, a command line tool is a program that we can run from the Terminal (on MacOS) or Command Prompt (on Windows). We can use it to install packages, run scripts, and more.
+2. A repository of packages that we can browse and search. This is where we can find the packages that we want to install into our application. For example, if I wanted to find the React package, I would search for it on the [NPM website](https://www.npmjs.com/).
+
+NPM is the default package manager for Node.js, but there are other package managers for other languages and frameworks. For example, [Composer](https://getcomposer.org/) is a package manager for PHP. Even JavaScript has replacements for NPM, such as [Yarn](https://yarnpkg.com/) and [pnpm](https://pnpm.io/) that battle over being faster, easier to use and more reliable.
+
+## Dependencies
+
+When we install a package into our application, we call it a dependency. This is because our application depends on that package to function. Dependencies often have their own dependencies, which means that we are also installing those dependencies into our application. It is interesting though to think of dependencies as a vast tree of packages. For example, React has a dependency on `prop-types`, which has a dependency on `loose-envify`, which has a dependency on `js-tokens` and so forth.
+
+There are many popular libraries and packages that we can use to help us build our applications. For example, [Stripe](https://stripe.com/) is a payment processing service that we can use to accept payments on our website. They maintain a ton of libraries for different languages and frameworks. For example, if we wanted to use Stripe in a React application, we could install their library with a package like `@stripe/react-stripe-js`.
+
+I also tend to publish my own packages whenever I design a collection of code I think would be useful for others. You can find some of these on the [Code](/code) page.
+
+## Components
+
+Like libraries and packages, components are a way to abstract away the complexity of a particular code into a seperate file that we can import into our application. In libraries like [React](https://reactjs.org/), components refer to the building blocks of our user interface. They are the smallest pieces of our application that we can build and combine to create more complex components.
+
+For example, if we built a really good navigation bar, we could create a component for it and import it into our application. This way, we can reuse the same navigation bar across multiple pages without having to write the same code over and over again.
+
+![Footer Component](/images/blog/footer.png)
+
+You can build components from scratch, build on top of more primitive components like [Radix UI](https://www.radix-ui.com/) or unstyled composable components like [cmdk](https://cmdk.paco.me/). There are also [Web Components](https://developer.mozilla.org/en-US/docs/Web/Web_Components) which are a set of standards that allow us to create custom HTML elements (basically cross-library or cross-framework components), however they're not super popular just yet.
+
+## Design Systems
+
+When we have enough reusable components, we can start to build a design system, like [Atlassian](https://atlassian.design/), [Segment](https://evergreen.surge.sh/) or [Microsoft](https://developer.microsoft.com/en-us/fluentui#/) have. A design system is a collection of reusable components that we can use to build our applications. It is a way to standardize the look and feel of our applications, and make it easier to build new features.
+
+Design systems are a great way to build applications faster, and make it easier to maintain them over time. They also help us build applications that are more consistent and predictable. For example, if we have a button component that we use in our application, we can be sure that it will always look and behave the same way. This is because we have a single source of truth for our button component, and we can make changes to it in one place.
+
+Design Systems are a huge emerging trend in the web development community as web applications become more complex and require more and more components. If you want to learn more, Figma have a [cool website](https://www.designsystems.com/) that has a ton of resources on the topic.
+
+## APIs
+
+API stands for Application Programming Interface. It is a set of rules and guidelines that allow different systems to interact with each other. It contains a set of functions and procedures that allow the creation of applications that access the features or data of an operating system, application, or other service.
+
+Like a bridge between worlds, APIs allow systems that your create to communicate and share information with systems that other people create, by receiving and/or giving data. They provide access to the functionality and data of a particular system, allowing other applications to use it. They are the interface that allows different systems to interact.
+
+Let's take Twitter as an example. Twitter maintains a massive internal database of tweets, users and other information. They also have a website ([twitter.com](https://twitter.com/)) that allows users to view and interact with this data.
+
+If Twitter wanted to allow developers to, for example, pull their own tweets on to their own website, they would need to provide a way for developers to access this data. Giving out access to their internal database would be a super bad idea, as it would be a massive security risk and allow people to do all sorts of bad things.
+
+Instead, they provide a subset of this data through a narrow, highly-controlled entry point. This is the API. It allows developers to access the data they need, but not the data they don't need. It also allows Twitter to control how developers access this data, how often they can access it and what they can do with it.
+
+There are many different types of APIs, but the most common ones are REST APIs and GraphQL APIs. REST stands for Representational State Transfer, and GraphQL stands for Graph Query Language. Both of these are ways of accessing data from a server, just with different approaches and syntax.
+
+## Build Tools
+
+Build tools help us automate the process of building our application. It is a set of scripts that we can run to compile our code, run tests, and more. You don't need a build system for a website or web application, but the more modern or experimental your application is, the more likely you are to need one. You can either create your own build system from ground up, or you can use one that's built into the framework you've chosen.
+
+For example, if we're building a website that uses more modern JavaScript (e.g. ES6 / ES7), we'll need to transform our code into code that is compatible with older browsers. This is because browsers don't support the latest JavaScript features yet, and we need to make sure that our website works on all browsers. We can use a build system to automate this process for us.
+
+Most website build tools run on [Node.js](https://nodejs.org/en/), which is essentially JavaScript that runs outside of a browser. This means that we can use JavaScript to write our build scripts, which is a lot easier than using a different language. As a side note, JavaScript is quickly propagating into the world of server-side development, and is quickly becoming the default language for writing server-side code for web applications. Some folks are also experimenting with [Rust](https://www.rust-lang.org/) for JavaScript tooling (like [Turbo](https://turbo.build/pack)), but it's still early days.
+
+When we combine a bunch of build tools together, we get a build system. Build systems can be comprised of a lot of elements, but some of the primary use cases include:
+
+- **Transcompiling / Pre-Processing**: Transcompiling (a portmanteau of "translate" and "compile") and pre-processing are ways to convert code written in one language to code written in another language. For example, we could use [Babel](https://babeljs.io/) for our use case above (to convert our modern JavaScript code into code that is compatible with older browsers), [PostCSS](https://postcss.org/) to expand the capabilities of our CSS and [TypeScript](https://www.typescriptlang.org/) to convert our TypeScript code into JavaScript.
+- **Compressing**: Compressing is a way to reduce the size of our code. For example, we can use [UglifyJS](https://lisperator.net/uglifyjs/) or [Terser](https://terser.org/) to remove unnecessary whitespace and comments from our code.
+- **Bundling**: Bundling is a way to [package up your application](https://www.youtube.com/watch?v=5IG4UmULyoA) source code with its dependencies into a single file. This is useful for deploying your application to a server, or for sharing it with others. There are various bundlers available for JavaScript apps. For example, [Webpack](https://webpack.js.org/), [Rollup](https://rollupjs.org/guide/en/), [Parcel](https://parceljs.org/), [Vite](https://vitejs.dev/) and [ESBuild](https://esbuild.github.io/).
+
+## Optimization
+
+There are many ways to optimize websites and web apps. One of the most important metrics is **performance**. This is the speed at which a website loads and renders. Because "performance" is subjective, we tend to break it down into more specific metrics, such as [Time to First Byte (TTFB)](https://web.dev/ttfb/), [Time to Interactive (TTI)](https://web.dev/tti/), and [First Contentful Paint (FCP)](https://web.dev/fcp/). We can use a variety of tools to measure performance, such as [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/), which is built into Google Chrome.
+
+Another popular focus is search engine optimization, or **SEO**. This involves using techniques to improve a website's visibility and ranking in search engine results so more users will find and visit the site. SEO can be broken down into two main categories: on-page optimization ([meta tags](https://www.wordstream.com/meta-tags), content, [structured data](https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data)) and off-page optimization (backlinks and other external factors). As a frontend developer, you can audit your sites using tools like [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/) for a technical review, then something like [ahrefs](https://ahrefs.com/) to keep track your progress ongoing.
+
+![SEO](https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1902&q=80)
+
+**Security** is another important aspect of website optimization. This involves ensuring that our websites are resilient against various threats, such as [cross-site scripting (XSS)](https://owasp.org/www-community/attacks/xss/), [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) misconfigurations, and [Subresource Integrity (SRI)](https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity) violations. While we can't prevent all security threats, we can take steps to minimize the risk of our websites being compromised. You can use tools like [Mozilla Observatory](https://observatory.mozilla.org/) for a breakdown of the various security issues that need to be addressed, or manually check your site against the [OWAS Web Checklist](https://github.com/0xRadi/OWASP-Web-Checklist). If you're using a framework like [Next.js](https://nextjs.org/), you can packages like [next-secure-headers](https://www.npmjs.com/package/next-secure-headers) to implement some security improvements automatically.
+
+**Accessibility** (or, a11y) involves ensuring that our websites are usable by all visitors, regardless of their abilities. This includes ensuring that our websites are usable by people with visual, auditory, motor, and cognitive disabilities. We can use a variety of tools to audit the accessibility of our websites, such as [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/) and [axe](https://www.deque.com/axe/), or we can manually check how our websites function on [screen readers](https://blog.hubspot.com/website/screen-reader-accessibility).
+
+## Testing
+
+Automated testing is a way to ensure that our website or application is working as expected. It involves [writing special code](https://www.softwaretestingmaterial.com/software-testing/) that tests our application code. There are many different types of tests, for example:
+
+- **Unit tests** focus on a single unit of code (like a [function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions)), useful for ensuring that our code is working as expected, and that it is not introducing any bugs.
+- **Integration tests** focus on the integration of multiple units of code, useful for ensuring that our code is working as expected when it is integrated with other parts of our application.
+- **End-to-end tests** focus on the entire user flow of our application, useful for ensuring that our application is working as expected from the user's perspective.
+
+As a frontend engineer, you might use tools like [Jest](https://jestjs.io/), [Cypress](https://www.cypress.io/) or [Selenium](https://www.selenium.dev/) to write and run tests.
+
+<Callout>
+  If you've never written a test before, I recommend checking out
+  [Refraction](https://www.refraction.dev/) and having an AI generate one for
+  you.
+</Callout>
+
+## Version Control
+
+If you've ever used Google Docs or Figma, you've probably seen a feature called "version history". This feature allows you to see a history of changes made to a document. Version control is a similar concept, but it's used for code instead of documents.
+
+For engineers, Version Control is a super important system that keeps track of changes made to files in a codebase, such as documents, code, or images. It allows you to save different versions of a file and go back to earlier versions if needed. This can be especially useful when working on a project with multiple people, or when working on something over a long period of time.
+
+There are different types of version control systems (e.g. [Subversion](https://subversion.apache.org/), [Mercurial](https://www.mercurial-scm.org/), etc.), but one of the most popular is called [Git](https://git-scm.com/). It's used by almost every company I can think of. Git is a command-line tool that you can use to keep track of changes made to files in a codebase, as well as to collaborate with other people on a project. However, you still need to host your code somewhere, and that's where [GitHub](https://github.com/) comes in.
+
+![GitHub](https://images.unsplash.com/photo-1556075798-4825dfaaf498?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1752&q=80)
+
+GitHub is a website that hosts Git repositories. A repository is a collection of files that are tracked by Git. You can think of it as a folder that contains all the files for a project. You can use GitHub to collaborate with other people on a project, or to share your code with the world. There are also other websites that host Git repositories, such as [GitLab](https://about.gitlab.com/) and [Bitbucket](https://bitbucket.org/product). Fundamentally, they all do the same thing, but they have different features and user interfaces.
+
+Version Control is comprised of a number of [different concepts](https://marklodato.github.io/visual-git-guide/index-en.html), including [Commits](https://docs.github.com/en/get-started/quickstart/github-glossary#commit), [Branches](https://docs.github.com/en/get-started/quickstart/github-glossary#branch), [Pull Requests](https://docs.github.com/en/get-started/quickstart/github-glossary#pull-request) and [Merges](https://docs.github.com/en/get-started/quickstart/github-glossary#merge). I recommend reading the [GitHub Glossary](https://docs.github.com/en/get-started/quickstart/github-glossary) to learn more about these concepts.
+
+## Linting and Formatters
+
+When you work on a large and complex codebase (especially with other engineers), it's important to have a consistent style. This makes it easier for other people to read, understand and modify your code. It also helps to catch errors and bugs early on.
+
+Linters and formatters are tools that help us write better code. They help us catch errors and enforce a consistent style. They can also help us write code faster by automatically formatting our code for us as we type.
+
+The key difference is that a linter will typically report violations, but it's usually up to the programmer to fix the problem, while a code formatter tends to apply its rules directly to the source code, thus correcting formatting mistakes automatically. In a good setup, these two will work together like a ham and cheese sandwich.
+
+There are a handful of de-facto tools for this, including [ESLint](https://eslint.org/), [Prettier](https://prettier.io/) and [Stylelint](https://stylelint.io/). Each of these comes with a massive amount of plugins, presets and configurations to choose from. You can also write your own rules and configurations if you want to.
+
+As such, it's common to choose a preset that you like, for example [Airbnb's ESLint config](https://www.npmjs.com/package/eslint-config-airbnb) and customize it to your liking.
+
+<Callout>
+  I actually have my own ESLint configuration that I built from scratch, called
+  [Harmony](https://github.com/beskar-co/harmony). It's strict, highly
+  opinionated, designed modern React apps and does a lot of heavy lifting for
+  you.
+</Callout>
+
+## Summary
+
+In this post, we've covered a lot of different topics. We've talked about what frontend engineering is, what frontend engineers do, and what tools they use to do it. We've also talked about some of the different concepts that frontend engineers need to know, including HTML, CSS, JavaScript, React, Testing, Version Control, Linting and much more. However, there is still a lot more to learn. Frontend engineering is a huge field, and there are all sorts of weird and wonderful things to explore.
+
+For example, you could check out [GraphQL](https://graphql.org/learn/) (maybe with [Apollo](https://www.apollographql.com/)), different methods for Authentication (JWT, OAuth, SSO, Sessions, etc), [Progressive Web Apps](https://www.freecodecamp.org/news/what-are-progressive-web-apps/), [WebRTC](https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API), [WebAssembly](https://developer.mozilla.org/en-US/docs/WebAssembly), [Three.js](https://threejs.org/) and [WebGL](https://get.webgl.org/).
+
+But for now, I hope post has given you a good overview of what frontend engineering is. If you have any questions, feel free to ask them [on Twitter](https://twitter.com/haydenbleasel). I'll try to answer them as best I can. Thanks for reading!
+
+## Bonus content
+
+If you managed to make it this far, here's something I hope you'll like.
+
+<Video
+  className="relative overflow-hidden rounded-sm"
+  url="https://www.youtube.com/watch?v=Uo3cL4nrGOk"
+/>
+
+Thank you [Gavin](https://gavinbarnett.com/) and [Hayden](https://haydenbarnett.com/) for reviewing this post. I really appreciate it.
