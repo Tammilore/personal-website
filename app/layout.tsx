@@ -87,9 +87,14 @@ const socialLinks = [
 const RootLayout: FC<RootLayoutProps> = ({ children }) => (
   <html lang="en">
     <body
-      className={cn(sans.variable, 'bg-white font-sans dark:bg-neutral-950')}
+      className={cn(
+        sans.variable,
+        'bg-neutral-100 font-sans dark:bg-neutral-950 antialiased'
+      )}
     >
-      {children}
+      <div className="prose prose-sm prose-neutral mx-auto flex flex-col gap-16 py-24 max-w-[30rem]">
+        {children}
+      </div>
       <Analytics />
       {/* eslint-disable-next-line react/no-danger, @typescript-eslint/naming-convention */}
       <div dangerouslySetInnerHTML={{ __html: profileJsonLd }} />
