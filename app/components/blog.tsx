@@ -14,18 +14,23 @@ export const Blog: FC = () => (
     }
   >
     <div className="flex flex-col gap-2">
-      {allBlogs.sort(sortBlogPostByDate).map((post) => (
-        <Link
-          href={post.slug}
-          className="flex items-center gap-4 justify-between no-underline font-normal"
-          key={post.slug}
-        >
-          <p className="m-0 text-neutral-900 text-sm truncate">{post.title}</p>
-          <p className="w-[7rem] m-0 text-neutral-500 text-xs text-right">
-            {formatDate(post.date)}
-          </p>
-        </Link>
-      ))}
+      {allBlogs
+        .sort(sortBlogPostByDate)
+        .slice(0, 5)
+        .map((post) => (
+          <Link
+            href={post.slug}
+            className="flex items-center gap-4 justify-between no-underline font-normal"
+            key={post.slug}
+          >
+            <p className="m-0 text-neutral-900 text-sm truncate">
+              {post.title}
+            </p>
+            <p className="w-[7rem] m-0 text-neutral-500 text-xs text-right">
+              {formatDate(post.date)}
+            </p>
+          </Link>
+        ))}
     </div>
   </Section>
 );

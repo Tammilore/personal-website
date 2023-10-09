@@ -36,7 +36,7 @@ const source = makeSource({
   mdx: {
     remarkPlugins: remarkPlugins(),
     rehypePlugins: rehypePlugins({
-      theme: 'rose-pine-moon',
+      theme: 'nord',
     }),
   },
 });

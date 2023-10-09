@@ -1,5 +1,7 @@
 import './globals.css';
 import { Analytics } from '@vercel/analytics/react';
+import Image from 'next/image';
+import Link from 'next/link';
 import { sans } from '@/lib/fonts';
 import { cn, toJsonLd } from '@/lib/utils';
 import type { FC, ReactNode } from 'react';
@@ -92,8 +94,17 @@ const RootLayout: FC<RootLayoutProps> = ({ children }) => (
         'bg-neutral-100 font-sans dark:bg-neutral-950 antialiased'
       )}
     >
-      <div className="prose prose-sm prose-neutral mx-auto flex flex-col gap-16 py-24 max-w-[30rem]">
-        {children}
+      <div className="prose prose-sm prose-neutral mx-auto flex flex-col gap-8 py-24 max-w-[30rem]">
+        <Link href="/" aria-label="Home">
+          <Image
+            width={32}
+            height={32}
+            src="/avatar.jpg"
+            alt="Hayden Bleasel"
+            className="w-8 h-8 rounded-full object-cover m-0"
+          />
+        </Link>
+        <div className="flex flex-col gap-16">{children}</div>
       </div>
       <Analytics />
       {/* eslint-disable-next-line react/no-danger, @typescript-eslint/naming-convention */}
