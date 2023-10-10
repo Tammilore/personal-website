@@ -30,9 +30,34 @@ export const Blog = defineDocumentType(() => ({
   computedFields: computeFields<'Blog'>({}),
 }));
 
+export const Work = defineDocumentType(() => ({
+  name: 'Work',
+  filePathPattern: `work/**/*.mdx`,
+  contentType: 'mdx',
+  fields: {
+    role: {
+      type: 'string',
+      required: true,
+    },
+    company: {
+      type: 'string',
+      required: true,
+    },
+    startYear: {
+      type: 'number',
+      required: true,
+    },
+    endYear: {
+      type: 'number',
+      required: false,
+    },
+  },
+  computedFields: computeFields<'Work'>({}),
+}));
+
 const source = makeSource({
   contentDirPath: './content',
-  documentTypes: [Blog],
+  documentTypes: [Blog, Work],
   mdx: {
     remarkPlugins: remarkPlugins(),
     rehypePlugins: rehypePlugins({
