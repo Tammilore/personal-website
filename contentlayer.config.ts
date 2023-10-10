@@ -55,6 +55,10 @@ export const Work = defineDocumentType(() => ({
       type: 'number',
       required: false,
     },
+    location: {
+      type: 'string',
+      required: true,
+    },
   },
   computedFields: computeFields<'Work'>({}),
 }));

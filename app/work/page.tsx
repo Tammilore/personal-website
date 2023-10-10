@@ -32,7 +32,7 @@ const Work: FC = () => (
               width={36}
               height={36}
               className="w-9 h-9 rounded-lg m-0 shadow-sm"
-              blurDataURL={job.imageBlur}
+              blurDataURL={`data:image/svg;base64,${job.imageBlur}`}
             />
             <div>
               <p className="m-0">
