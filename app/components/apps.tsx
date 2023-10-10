@@ -56,10 +56,7 @@ export const Apps: FC = () => (
     title="Apps"
     footer={
       <>
-        <a href="#" target="_blank" rel="noopener noreferrer">
-          Click here
-        </a>{' '}
-        to view more apps.
+        <Link href="/apps">Click here</Link> to view more apps.
       </>
     }
   >
@@ -72,16 +69,13 @@ export const Apps: FC = () => (
           height={36}
           className="w-9 h-9 rounded-lg m-0 shadow-sm"
         />
-        <Link href={app.link} className="font-normal no-underline">
+        <div>
           <p className="m-0">
-            {app.name}
+            <Link href={app.link}>{app.name}</Link>
             {app.caption ? (
               <span className="ml-1 text-sm text-neutral-500">
                 {app.caption.link ? (
-                  <Link
-                    href={app.caption.link}
-                    className="text-inherit font-normal"
-                  >
+                  <Link className="text-inherit" href={app.caption.link}>
                     ({app.caption.text})
                   </Link>
                 ) : (
@@ -91,7 +85,7 @@ export const Apps: FC = () => (
             ) : null}
           </p>
           <p className="m-0 text-neutral-500 text-xs">{app.description}</p>
-        </Link>
+        </div>
       </div>
     ))}
   </Section>

@@ -8,10 +8,6 @@ type ProjectsProps = {
   name: string;
   description: string;
   link: string;
-  caption?: {
-    text: string;
-    link?: string;
-  };
 };
 
 const projects: ProjectsProps[] = [
@@ -43,26 +39,13 @@ export const Projects: FC = () => (
     title="Open Source"
     footer={
       <>
-        View more on{' '}
-        <a
-          href="https://github.com/haydenbleasel"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          GitHub
-        </a>
+        View more on <Link href="https://github.com/haydenbleasel">GitHub</Link>
         .
       </>
     }
   >
     {projects.map((project) => (
-      <a
-        className="flex items-center gap-4 no-underline font-normal"
-        key={project.name}
-        href={project.link}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
+      <div className="flex items-center gap-4" key={project.name}>
         <Image
           src={project.image}
           alt=""
@@ -72,25 +55,11 @@ export const Projects: FC = () => (
         />
         <div>
           <p className="m-0">
-            {project.name}
-            {project.caption ? (
-              <span className="ml-1 text-sm text-neutral-500">
-                {project.caption.link ? (
-                  <Link
-                    href={project.caption.link}
-                    className="text-inherit font-normal"
-                  >
-                    ({project.caption.text})
-                  </Link>
-                ) : (
-                  `(${project.caption.text})`
-                )}
-              </span>
-            ) : null}
+            <Link href={project.link}>{project.name}</Link>
           </p>
           <p className="m-0 text-neutral-500 text-xs">{project.description}</p>
         </div>
-      </a>
+      </div>
     ))}
   </Section>
 );

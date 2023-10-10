@@ -58,7 +58,7 @@ const DocPage: FC<DocPageProps> = ({ params }) => {
       <div>
         <div className="relative">
           <Link
-            className="absolute inline-flex items-center gap-1 text-xs -left-24 text-neutral-500 no-underline top-0.5"
+            className="absolute inline-flex items-center gap-1 text-xs -left-24 text-neutral-500 top-0.5"
             href="/blog"
           >
             <ArrowLeftIcon className="h-4 w-4" />

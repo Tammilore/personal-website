@@ -65,30 +65,20 @@ export const Work: FC = () => (
     title="Work"
     footer={
       <>
-        Read more on{' '}
-        <a
-          href="https://read.cv/haydenbleasel"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          read.cv
-        </a>
+        Read more on <Link href="https://read.cv/haydenbleasel">read.cv</Link>
       </>
     }
   >
     {work.map((job) => (
       <div className="flex items-center justify-between gap-4" key={job.role}>
         <p className="m-0">
-          <Link href={job.link} className="font-normal no-underline">
+          <Link href={job.link}>
             {job.role}, {job.company}
           </Link>
           {job.caption ? (
             <span className="ml-1 text-sm text-neutral-500">
               {job.caption.link ? (
-                <Link
-                  href={job.caption.link}
-                  className="text-inherit font-normal"
-                >
+                <Link className="text-inherit" href={job.caption.link}>
                   ({job.caption.text})
                 </Link>
               ) : (

@@ -95,7 +95,7 @@ const RootLayout: FC<RootLayoutProps> = ({ children }) => (
       )}
     >
       <div className="prose prose-sm prose-neutral mx-auto flex flex-col gap-8 py-24 max-w-[30rem]">
-        <Link href="/" aria-label="Home">
+        <Link href="/" aria-label="Home" className="w-fit">
           <Image
             width={32}
             height={32}

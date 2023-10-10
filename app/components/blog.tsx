@@ -18,18 +18,20 @@ export const Blog: FC = () => (
         .sort(sortBlogPostByDate)
         .slice(0, 5)
         .map((post) => (
-          <Link
-            href={post.slug}
-            className="flex items-center gap-4 justify-between no-underline font-normal"
+          <div
+            className="flex items-center gap-4 justify-between"
             key={post.slug}
           >
-            <p className="m-0 text-neutral-900 text-sm truncate">
+            <Link
+              href={post.slug}
+              className="m-0 text-neutral-900 text-sm truncate"
+            >
               {post.title}
-            </p>
+            </Link>
             <p className="w-[7rem] m-0 text-neutral-500 text-xs text-right">
               {formatDate(post.date)}
             </p>
-          </Link>
+          </div>
         ))}
     </div>
   </Section>

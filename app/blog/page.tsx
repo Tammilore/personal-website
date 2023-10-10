@@ -17,7 +17,7 @@ const Blog: FC = () => (
       {allBlogs.sort(sortBlogPostByDate).map((post) => (
         <Link
           href={post.slug}
-          className="flex items-center gap-4 justify-between no-underline font-normal"
+          className="flex items-center gap-4 justify-between"
           key={post.slug}
         >
           <p className="m-0 text-neutral-900 text-sm truncate">{post.title}</p>

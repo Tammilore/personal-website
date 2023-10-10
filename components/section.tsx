@@ -8,7 +8,7 @@ type SectionProps = {
 
 export const Section: FC<SectionProps> = ({ title, children, footer }) => (
   <section className="flex flex-col gap-6">
-    <h2 className="text-sm font-medium text-neutral-900 m-0">{title}</h2>
+    <h2 className="text-sm font-medium text-neutral-500 m-0">{title}</h2>
     <div className="flex flex-col gap-2">{children}</div>
     <p className="text-sm text-neutral-500 m-0">{footer}</p>
   </section>
