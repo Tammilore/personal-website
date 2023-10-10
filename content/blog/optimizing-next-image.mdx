@@ -2,14 +2,12 @@
 title: Optimizing Next.js images for speed and quality
 description: Next.js' Image component is highly reliable and configurable. Here's how to get the most out of it.
 date: 11-22-2022
-image: /blog/optimizing-next-image.jpg
+image: /blog/next-image-config.png
 ---
 
 [Next.js](https://nextjs.org/)'s built-in image component (`next/image`) provides a simple and efficient way to handle responsive images in your Next.js app. It's a wrapper around the standard HTML `<img>` element with added features and functionality specifically tailored for Next.js applications, such as the `IntersectionObserver` API to lazy-load images or serving external images locally.
 
 One of the key benefits of using the `next/image` component is that it allows you to optimize the size and quality of your images for different devices and screen sizes. This is especially important in the context of mobile devices, where network bandwidth can be limited and users are often on low-power devices. This way, you can ensure that your images are always displayed at the optimal size and quality for the user's device, without sacrificing performance.
-
-![Quality](/blog/next-image-config.png)
 
 While the `next/image` component is brilliant out of the box, it's also highly configurable. At the risk of sounding clickbait-y, here's 3 handy configurations that I use on every Next.js project I work on.
 
