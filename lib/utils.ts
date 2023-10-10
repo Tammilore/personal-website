@@ -1,6 +1,6 @@
 import { clsx } from 'clsx';
 import { twMerge } from 'tailwind-merge';
-import type { Blog } from '@/.contentlayer/generated';
+import type { Blog, Work } from '@/.contentlayer/generated';
 import type { Thing, WithContext } from 'schema-dts';
 import type { ClassValue } from 'clsx';
 
@@ -26,3 +26,6 @@ export const sortBlogPostByDate = (blogPostA: Blog, blogPostB: Blog): number =>
   new Date(blogPostB.date).getTime() > new Date(blogPostA.date).getTime()
     ? 1
     : -1;
+
+export const sortByStartYear = (workA: Work, workB: Work): number =>
+  workB.startYear > workA.startYear ? 1 : -1;

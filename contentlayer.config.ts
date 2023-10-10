@@ -43,6 +43,10 @@ export const Work = defineDocumentType(() => ({
       type: 'string',
       required: true,
     },
+    image: {
+      type: 'string',
+      required: true,
+    },
     startYear: {
       type: 'number',
       required: true,
