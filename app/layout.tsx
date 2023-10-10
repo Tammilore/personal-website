@@ -1,7 +1,7 @@
 import './globals.css';
 import { Analytics } from '@vercel/analytics/react';
 import Image from 'next/image';
-import Link from 'next/link';
+import { Link } from '@/components/link';
 import { sans } from '@/lib/fonts';
 import { cn, toJsonLd } from '@/lib/utils';
 import type { FC, ReactNode } from 'react';

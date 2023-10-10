@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation';
-import Link from 'next/link';
 import { ArrowLeftIcon } from '@radix-ui/react-icons';
 import Image from 'next/image';
+import { Link } from '@/components/link';
 import { allBlogs } from '@contentlayer/generated';
 import { createMetadata } from '@/lib/metadata';
 import { Mdx } from '@/components/mdx';

@@ -1,5 +1,5 @@
-import Link from 'next/link';
 import Image from 'next/image';
+import { Link } from '@/components/link';
 import { fetchDribbbleShot } from '@/lib/dribbble';
 import type { ReactElement } from 'react';
 

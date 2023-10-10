@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import { Link } from '@/components/link';
 import { MailingList } from '@/components/mailing';
 import type { FC } from 'react';
 

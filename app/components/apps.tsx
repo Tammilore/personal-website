@@ -1,5 +1,5 @@
-import Link from 'next/link';
 import Image from 'next/image';
+import { Link } from '@/components/link';
 import { Section } from '@/components/section';
 import type { FC } from 'react';
 
@@ -19,35 +19,35 @@ const apps: AppProps[] = [
     name: 'Refraction',
     description: 'Learn, improve and generate code with AI.',
     image: '/apps/refraction.png',
-    link: '#',
+    link: 'https://www.refraction.dev/',
     caption: {
       text: 'acquired',
-      link: '#',
+      link: '/blog/refraction',
     },
   },
   {
     name: 'Superlight',
     description: 'A lightweight platform for running recurring syncs.',
     image: '/apps/superlight.svg',
-    link: '#',
+    link: 'https://www.superlight.app/',
   },
   {
     name: 'texts.run',
     description: 'A simple, messenger-style webpage builder.',
     image: '/apps/texts.svg',
-    link: '#',
+    link: 'https://www.texts.run/',
   },
   {
     name: 'Waitlist',
     description: 'Fast, unbranded waitlists for developers.',
     image: '/apps/waitlist.svg',
-    link: '#',
+    link: 'https://www.waitlist.email/',
   },
   {
     name: 'Vercel for VS Code',
     description: 'A VS Code extension for Vercel deployment status.',
     image: '/apps/vercel.svg',
-    link: '#',
+    link: 'https://marketplace.visualstudio.com/items?itemName=HaydenBleasel.vercel-vscode',
   },
 ];
 
@@ -72,7 +72,7 @@ export const Apps: FC = () => (
           height={36}
           className="w-9 h-9 rounded-lg m-0 shadow-sm"
         />
-        <div>
+        <Link href={app.link} className="font-normal no-underline">
           <p className="m-0">
             {app.name}
             {app.caption ? (
@@ -91,7 +91,7 @@ export const Apps: FC = () => (
             ) : null}
           </p>
           <p className="m-0 text-neutral-500 text-xs">{app.description}</p>
-        </div>
+        </Link>
       </div>
     ))}
   </Section>

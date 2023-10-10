@@ -1,27 +1,7 @@
-import localFont from 'next/font/local';
+import { Inter as createSans } from 'next/font/google';
 
-export const sans = localFont({
+export const sans = createSans({
   variable: '--font-sans',
-  src: [
-    {
-      path: '../public/fonts/TWKLausanne-300.woff2',
-      weight: '300',
-      style: 'normal',
-    },
-    {
-      path: '../public/fonts/TWKLausanne-300Italic.woff2',
-      weight: '300',
-      style: 'italic',
-    },
-    {
-      path: '../public/fonts/TWKLausanne-600.woff2',
-      weight: '600',
-      style: 'normal',
-    },
-    {
-      path: '../public/fonts/TWKLausanne-600Italic.woff2',
-      weight: '600',
-      style: 'italic',
-    },
-  ],
+  weight: 'variable',
+  subsets: ['latin'],
 });

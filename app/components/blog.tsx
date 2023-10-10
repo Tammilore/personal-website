@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import { Link } from '@/components/link';
 import { allBlogs } from '@contentlayer/generated';
 import { Section } from '@/components/section';
 import { formatDate, sortBlogPostByDate } from '@/lib/utils';
