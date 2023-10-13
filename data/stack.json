@@ -1,0 +1,188 @@
+[
+  {
+    "name": "1Password",
+    "href": "https://1password.com/",
+    "description": "Stop remembering passwords.",
+    "type": "Security"
+  },
+  {
+    "name": "CleanShot X",
+    "href": "https://cleanshot.com/",
+    "description": "Screen capture, enhanced.",
+    "type": "Productivity"
+  },
+  {
+    "name": "DaisyDisk",
+    "href": "https://daisydiskapp.com/",
+    "description": "Visually analyze your MacOS disk usage.",
+    "type": "Productivity"
+  },
+  {
+    "name": "Dovetail",
+    "href": "https://dovetailapp.com/",
+    "description": "Where customer knowledge lives.",
+    "type": "Design"
+  },
+  {
+    "name": "Figma",
+    "href": "https://www.figma.com/",
+    "description": "Collaborative interface design tool.",
+    "type": "Design"
+  },
+  {
+    "name": "GitHub Desktop",
+    "href": "https://desktop.github.com/",
+    "description": "Simple repository management.",
+    "type": "Coding"
+  },
+  {
+    "name": "ImageOptim",
+    "href": "https://imageoptim.com/mac",
+    "description": "Losslessly optimize images for the web.",
+    "type": "Design"
+  },
+  {
+    "name": "Linear",
+    "href": "https://linear.app/",
+    "description": "Simple, focused issue tracking.",
+    "type": "Productivity"
+  },
+  {
+    "name": "NordVPN",
+    "href": "https://ref.nordvpn.com/LtLyFxYFRmA",
+    "description": "Secure and private internet access.",
+    "type": "Security"
+  },
+  {
+    "name": "Notion",
+    "href": "https://www.notion.so/",
+    "description": "Documents with endless possibilities.",
+    "type": "Productivity"
+  },
+  {
+    "name": "Pitch",
+    "href": "https://pitch.com/",
+    "description": "Modern, collaborative presentation tool.",
+    "type": "Productivity"
+  },
+  {
+    "name": "Slack",
+    "href": "https://slack.com/",
+    "description": "The platform for teamwork.",
+    "type": "Productivity"
+  },
+  {
+    "name": "Postman",
+    "href": "https://www.postman.com/",
+    "description": "Build and test APIs.",
+    "type": "Coding"
+  },
+  {
+    "name": "Spark",
+    "href": "https://sparkmailapp.com/",
+    "description": "Unified, native and powerful email client.",
+    "type": "Productivity"
+  },
+  {
+    "name": "Spotify",
+    "href": "https://open.spotify.com/",
+    "description": "Enjoy and curate the world's music.",
+    "type": "Other"
+  },
+  {
+    "name": "Stake",
+    "href": "https://hellostake.com/",
+    "description": "Trade U.S. stocks from Australia.",
+    "type": "Finance"
+  },
+  {
+    "name": "Beeper",
+    "href": "https://www.beeper.com/",
+    "description": "All of your messages in one inbox.",
+    "type": "Social"
+  },
+  {
+    "name": "Typefully",
+    "href": "https://typefully.com/write",
+    "description": "Professional tools for Twitter.",
+    "type": "Social"
+  },
+  {
+    "name": "VS Code",
+    "href": "https://code.visualstudio.com/",
+    "description": "The code editor for the modern web.",
+    "type": "Coding"
+  },
+  {
+    "name": "Poet.so",
+    "href": "https://poet.so/",
+    "description": "Make pretty Twitter screenshots.",
+    "type": "Social"
+  },
+  {
+    "name": "Ray.so",
+    "href": "https://ray.so/",
+    "description": "Make pretty code snippet screenshots.",
+    "type": "Social"
+  },
+  {
+    "name": "Unsplash",
+    "href": "https://unsplash.com/",
+    "description": "Free, high-quality photos.",
+    "type": "Design"
+  },
+  {
+    "name": "Zoom",
+    "href": "https://zoom.us/",
+    "description": "Video conferencing, simplified.",
+    "type": "Productivity"
+  },
+  {
+    "name": "GitHub Copilot",
+    "href": "https://copilot.github.com/",
+    "description": "AI-powered code completion.",
+    "type": "Coding"
+  },
+  {
+    "name": "Screen Studio",
+    "href": "https://screenstudio.lemonsqueezy.com/?aff=VMdMv",
+    "description": "Beautiful screen recordings in minutes.",
+    "type": "Productivity"
+  },
+  {
+    "name": "Hyper",
+    "href": "https://hyper.is/",
+    "description": "Extensible and minimal Electron-based terminal.",
+    "type": "Coding"
+  },
+  {
+    "name": "Untitled UI",
+    "href": "https://untitledui.lemonsqueezy.com/?aff=VMdMv",
+    "description": "The ultimate UI kit and design system for Figma.",
+    "type": "Design"
+  },
+  {
+    "name": "Hotlist",
+    "href": "https://pqina.nl/hotlist",
+    "description": "A simple todo list in your MacOS menubar.",
+    "type": "Productivity"
+  },
+  {
+    "name": "Klack",
+    "href": "https://tryklack.com/",
+    "description": "Satisfying mechanical keyboard sounds for MacOS.",
+    "type": "Other"
+  },
+  {
+    "name": "Wise",
+    "href": "https://wise.com/invite/dic/haydenb95",
+    "description": "Global bank accounts with lower FX fees.",
+    "type": "Finance"
+  },
+  {
+    "name": "Robinhood",
+    "href": "https://join.robinhood.com/haydenb-e0f142",
+    "description": "Commission-free stock trading.",
+    "type": "Finance"
+  }
+]
