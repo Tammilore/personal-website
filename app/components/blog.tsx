@@ -28,7 +28,7 @@ export const Blog: FC = () => (
             >
               {post.title}
             </Link>
-            <p className="w-[7rem] m-0 text-neutral-500 text-xs text-right">
+            <p className="w-[7rem] m-0 text-neutral-600 text-xs text-right">
               {formatDate(post.date)}
             </p>
           </div>

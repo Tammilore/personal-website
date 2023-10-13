@@ -14,7 +14,7 @@ const Work: FC = () => (
   <>
     <section className="flex flex-col gap-1">
       <p className="m-0 text-neutral-900 font-medium text-sm">{title}</p>
-      <p className="m-0 text-neutral-500 text-sm">{description}</p>
+      <p className="m-0 text-neutral-600 text-sm">{description}</p>
     </section>
     <div className="flex flex-col gap-2">
       {allWorks.sort(sortByStartYear).map((job) => (
@@ -38,10 +38,10 @@ const Work: FC = () => (
               <p className="m-0">
                 <Link href={job.slug}>{job.role}</Link>
               </p>
-              <p className="m-0 text-neutral-500 text-xs">{job.company}</p>
+              <p className="m-0 text-neutral-600 text-xs">{job.company}</p>
             </div>
           </div>
-          <p className="m-0 text-neutral-500 text-xs">
+          <p className="m-0 text-neutral-600 text-xs">
             {job.startYear} &mdash; {job.endYear ?? 'Present'}
           </p>
         </div>

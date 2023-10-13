@@ -73,7 +73,7 @@ export const Apps: FC = () => (
           <p className="m-0">
             <Link href={app.link}>{app.name}</Link>
             {app.caption ? (
-              <span className="ml-1 text-sm text-neutral-500">
+              <span className="ml-1 text-sm text-neutral-600">
                 {app.caption.link ? (
                   <Link className="text-inherit" href={app.caption.link}>
                     ({app.caption.text})
@@ -84,7 +84,7 @@ export const Apps: FC = () => (
               </span>
             ) : null}
           </p>
-          <p className="m-0 text-neutral-500 text-xs">{app.description}</p>
+          <p className="m-0 text-neutral-600 text-xs">{app.description}</p>
         </div>
       </div>
     ))}

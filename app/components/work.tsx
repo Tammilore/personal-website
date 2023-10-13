@@ -76,7 +76,7 @@ export const Work: FC = () => (
             {job.role}, {job.company}
           </Link>
           {job.caption ? (
-            <span className="ml-1 text-sm text-neutral-500">
+            <span className="ml-1 text-sm text-neutral-600">
               {job.caption.link ? (
                 <Link className="text-inherit" href={job.caption.link}>
                   ({job.caption.text})
@@ -87,7 +87,7 @@ export const Work: FC = () => (
             </span>
           ) : null}
         </p>
-        <p className="m-0 text-neutral-500 text-xs">
+        <p className="m-0 text-neutral-600 text-xs">
           {job.startYear} &mdash; {job.endYear ?? 'Present'}
         </p>
       </div>
