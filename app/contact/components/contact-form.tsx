@@ -2,8 +2,8 @@
 
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
+import { useForm } from 'react-hook-form';
 import {
-  useFormField,
   Form,
   FormControl,
   FormDescription,
@@ -26,7 +26,7 @@ const formSchema = z.object({
 type FormValues = z.infer<typeof formSchema>;
 
 export const ContactForm: FC = () => {
-  const form = useFormField<FormValues>({
+  const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
     defaultValues: {
       name: '',
@@ -45,15 +45,20 @@ export const ContactForm: FC = () => {
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
         <FormField
           control={form.control}
           name="username"
           render={({ field }) => (
-            <FormItem>
+            <FormItem className="space-y-1">
               <FormLabel>Name</FormLabel>
               <FormControl>
-                <Input placeholder="Jane Smith" {...field} />
+                <Input
+                  required
+                  className="bg-white"
+                  placeholder="Jane Smith"
+                  {...field}
+                />
               </FormControl>
               <FormDescription>
                 Enter your full name, first and last.
@@ -66,10 +71,15 @@ export const ContactForm: FC = () => {
           control={form.control}
           name="email"
           render={({ field }) => (
-            <FormItem>
+            <FormItem className="space-y-1">
               <FormLabel>Email</FormLabel>
               <FormControl>
-                <Input placeholder="janesmith@acme.com" {...field} />
+                <Input
+                  required
+                  className="bg-white"
+                  placeholder="janesmith@acme.com"
+                  {...field}
+                />
               </FormControl>
               <FormDescription>
                 Enter your email address so I can get back to you.
@@ -82,10 +92,12 @@ export const ContactForm: FC = () => {
           control={form.control}
           name="message"
           render={({ field }) => (
-            <FormItem>
+            <FormItem className="space-y-1">
               <FormLabel>Message</FormLabel>
               <FormControl>
                 <Textarea
+                  required
+                  className="bg-white"
                   placeholder="Hello, I'd like to talk about..."
                   {...field}
                 />
