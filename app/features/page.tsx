@@ -1,18 +1,18 @@
 import { createMetadata } from '@/lib/metadata';
-import speaking from '@/data/speaking.json';
+import features from '@/data/features.json';
 import { Link } from '@/components/link';
 import type { FC } from 'react';
 
-const title = 'Speaking';
-const description = 'A list of conferences and meetups I have spoken at.';
+const title = 'Features';
+const description = 'Articles, podcasts, and other features.';
 
 export const metadata = createMetadata({
   title,
   description,
-  path: '/speaking',
+  path: '/features',
 });
 
-const Speaking: FC = () => (
+const Features: FC = () => (
   <>
     <section className="flex flex-col gap-1">
       <p className="m-0 text-neutral-900 dark:text-white font-medium text-sm">
@@ -23,16 +23,10 @@ const Speaking: FC = () => (
       </p>
     </section>
     <div className="flex flex-col gap-2">
-      {speaking.map(({ location, name, year, href }) => (
+      {features.map(({ name, year, href }) => (
         <div className="flex items-center justify-between gap-4" key={name}>
           <p className="m-0 truncate font-medium text-neutral-900 dark:text-white">
-            {href ? (
-              <Link href={href}>
-                {name}, {location}
-              </Link>
-            ) : (
-              `${name}, ${location}`
-            )}
+            <Link href={href}>{name}</Link>
           </p>
           <p className="m-0 text-neutral-600 dark:text-neutral-400 text-xs w-10 text-right shrink-0">
             {year}
@@ -43,4 +37,4 @@ const Speaking: FC = () => (
   </>
 );
 
-export default Speaking;
+export default Features;
