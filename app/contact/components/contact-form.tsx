@@ -78,7 +78,7 @@ export const ContactForm: FC = () => {
               <FormControl>
                 <Input
                   required
-                  className="bg-white"
+                  className="bg-white dark:bg-neutral-900"
                   placeholder="Jane Smith"
                   {...field}
                 />
@@ -99,7 +99,7 @@ export const ContactForm: FC = () => {
               <FormControl>
                 <Input
                   required
-                  className="bg-white"
+                  className="bg-white dark:bg-neutral-900"
                   placeholder="janesmith@acme.com"
                   {...field}
                 />
@@ -120,7 +120,7 @@ export const ContactForm: FC = () => {
               <FormControl>
                 <Textarea
                   required
-                  className="bg-white"
+                  className="bg-white dark:bg-neutral-900"
                   placeholder="Hello, I'd like to talk about..."
                   {...field}
                 />

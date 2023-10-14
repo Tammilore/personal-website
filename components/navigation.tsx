@@ -30,7 +30,13 @@ const pages = [
 ];
 
 export const Navigation: FC = () => (
-  <div className="sm:bg-white/90 sm:px-2 z-50 py-16 sm:py-16 sm:backdrop-blur-sm border-t sm:border-b sm:border-x border-neutral-200 sm:shadow sm:fixed sm:left-1/2 sm:-translate-x-1/2 sm:bottom-8 sm:rounded-full">
+  <div
+    className={cn(
+      'sm:px-2 z-50 py-16 sm:py-0 sm:backdrop-blur-sm border-t sm:border-b sm:border-x sm:shadow sm:fixed sm:left-1/2 sm:-translate-x-1/2 sm:bottom-8 sm:rounded-full',
+      'sm:bg-white/90 border-neutral-200',
+      'dark:sm:bg-neutral-950/90 dark:border-neutral-800'
+    )}
+  >
     <div className="flex flex-col sm:flex-row flex-wrap sm:flex-nowrap sm:items-center sm:p-1">
       {pages.map(({ name, href, icon: Icon }) => (
         <Tooltip key={name} delayDuration={0}>
