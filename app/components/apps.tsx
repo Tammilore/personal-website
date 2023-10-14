@@ -27,17 +27,15 @@ export const Apps: FC = () => (
           <div>
             <p className="m-0">
               <Link href={app.link}>{app.name}</Link>
-              {app.captionLink && app.captionText ? (
-                <Link
-                  className="text-inherit ml-1 text-sm text-neutral-600"
-                  href={app.captionLink as string}
-                >
-                  ({app.captionText})
-                </Link>
-              ) : null}
-              {app.captionLink && !app.captionText ? (
+              {app.caption ? (
                 <span className="ml-1 text-sm text-neutral-600">
-                  ({app.captionText})
+                  {app.caption.link ? (
+                    <Link className="text-inherit" href={app.caption.link}>
+                      ({app.caption.text})
+                    </Link>
+                  ) : (
+                    `(${app.caption.text})`
+                  )}
                 </span>
               ) : null}
             </p>

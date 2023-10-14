@@ -5,8 +5,10 @@
     "link": "https://www.refraction.dev/",
     "featured": true,
     "image": "/apps/refraction.png",
-    "captionText": "acquired",
-    "captionLink": "/blog/refraction"
+    "caption": {
+      "text": "acquired",
+      "link": "/blog/refraction"
+    }
   },
   {
     "name": "Superlight",
