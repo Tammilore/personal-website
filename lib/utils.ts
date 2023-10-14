@@ -27,5 +27,14 @@ export const sortBlogPostByDate = (blogPostA: Blog, blogPostB: Blog): number =>
     ? 1
     : -1;
 
-export const sortByStartYear = (workA: Work, workB: Work): number =>
-  workB.startYear > workA.startYear ? 1 : -1;
+export const sortByStartYear = (workA: Work, workB: Work): number => {
+  if (!workA.endYear) {
+    return -1;
+  }
+
+  if (!workB.endYear) {
+    return 1;
+  }
+
+  return workB.endYear - workA.endYear;
+};
