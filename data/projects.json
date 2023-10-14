@@ -1,0 +1,20 @@
+[
+  {
+    "name": "eslint-config-harmony",
+    "description": "Strict, opinionated ESLint config for modern TypeScript apps.",
+    "link": "https://github.com/haydenbleasel/eslint-config-harmony",
+    "image": "/projects/harmony.svg"
+  },
+  {
+    "name": "next-forge",
+    "description": "Robust and comprehensive boilerplate for modern Next.js web apps.",
+    "link": "https://github.com/haydenbleasel/next-forge",
+    "image": "/projects/forge.svg"
+  },
+  {
+    "name": "contentlayer-datapad",
+    "description": "Awesome Contentlayer configuration with GFM, LQIP, TOC and more.",
+    "link": "https://github.com/haydenbleasel/contentlayer-datapad",
+    "image": "/projects/datapad.svg"
+  }
+]
