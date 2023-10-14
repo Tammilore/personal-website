@@ -1,4 +1,5 @@
 import { createMetadata } from '@/lib/metadata';
+import { ContactForm } from './components/contact-form';
 import type { FC } from 'react';
 
 const title = 'Contact';
@@ -21,7 +22,7 @@ const Contact: FC = () => (
         {description}
       </p>
     </section>
-    <p>Hello</p>
+    <ContactForm />
   </>
 );
 
