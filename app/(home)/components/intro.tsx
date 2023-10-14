@@ -16,7 +16,11 @@ export const Intro: FC = () => (
       Previously I ran an agency called{' '}
       <Link href="/work/jellypepper">Jellypepper</Link>. We worked with startups
       in self-driving car tech, AI, biotech, crypto, drone delivery,
-      cybersecurity and even orbital (outer space) logistics.
+      cybersecurity and even orbital (outer space) logistics. Jellypepper was{' '}
+      <Link href="https://raw.studio/blog/raw-studio-acquires-jellypepper-to-expand-its-reach-to-the-startup-ecosystem/">
+        acquired
+      </Link>{' '}
+      in 2023 by Raw Studio, where I joined them as an Advisor.
     </p>
     <p>
       I have limited availability and occasionally take on freelance projects
