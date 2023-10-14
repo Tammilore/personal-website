@@ -6,6 +6,7 @@ import { sans } from '@/lib/fonts';
 import { cn, toJsonLd } from '@/lib/utils';
 import { Navigation } from '@/components/navigation';
 import { Providers } from '@/components/providers';
+import { Toaster } from '@/components/ui/toaster';
 import type { FC, ReactNode } from 'react';
 import type { Person } from 'schema-dts';
 
@@ -89,6 +90,7 @@ const RootLayout: FC<RootLayoutProps> = ({ children }) => (
         <Navigation />
       </Providers>
       <Analytics />
+      <Toaster />
       {/* eslint-disable-next-line react/no-danger, @typescript-eslint/naming-convention */}
       <div dangerouslySetInnerHTML={{ __html: profileJsonLd }} />
     </body>

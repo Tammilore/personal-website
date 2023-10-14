@@ -35,8 +35,8 @@ export const Navigation: FC = () => (
       {pages.map(({ name, href, icon: Icon }) => (
         <Tooltip key={name} delayDuration={0}>
           <TooltipTrigger asChild>
-            <ActiveProvider href={href} className="p-2 relative rounded-full">
-              <Link href={href}>
+            <Link href={href}>
+              <ActiveProvider href={href} className="p-2 relative rounded-full">
                 <Icon
                   className={cn(
                     'w-4 h-4 transition-colors',
@@ -46,8 +46,8 @@ export const Navigation: FC = () => (
                     'dark:group-[.active-page]:dark:text-white'
                   )}
                 />
-              </Link>
-            </ActiveProvider>
+              </ActiveProvider>
+            </Link>
           </TooltipTrigger>
           <TooltipContent>
             <span className="text-sm">{name}</span>
