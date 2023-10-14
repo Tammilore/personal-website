@@ -30,8 +30,8 @@ const pages = [
 ];
 
 export const Navigation: FC = () => (
-  <div className="bg-white/90 px-2 z-50 backdrop-blur-sm border border-neutral-200 shadow fixed left-1/2 -translate-x-1/2 bottom-8 rounded-full">
-    <div className="flex items-center p-1">
+  <div className="sm:bg-white/90 sm:px-2 z-50 py-16 sm:py-16 sm:backdrop-blur-sm border-t sm:border-b sm:border-x border-neutral-200 sm:shadow sm:fixed sm:left-1/2 sm:-translate-x-1/2 sm:bottom-8 sm:rounded-full">
+    <div className="flex flex-col sm:flex-row flex-wrap sm:flex-nowrap sm:items-center sm:p-1">
       {pages.map(({ name, href, icon: Icon }) => (
         <Tooltip key={name} delayDuration={0}>
           <TooltipTrigger asChild>
@@ -39,7 +39,7 @@ export const Navigation: FC = () => (
               <ActiveProvider href={href}>
                 <div
                   className={cn(
-                    'p-3 bg-transparent transition-colors relative rounded-full',
+                    'flex items-center gap-2 p-3 bg-transparent transition-colors relative rounded-full',
                     'group-[.active-page]:bg-neutral-100',
                     'dark:group-[.active-page]:bg-neutral-800'
                   )}
@@ -53,6 +53,7 @@ export const Navigation: FC = () => (
                       'dark:group-[.active-page]:dark:text-white'
                     )}
                   />
+                  <span className="sm:sr-only">{name}</span>
                 </div>
               </ActiveProvider>
             </Link>

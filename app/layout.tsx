@@ -75,7 +75,7 @@ const RootLayout: FC<RootLayoutProps> = ({ children }) => (
       )}
     >
       <Providers>
-        <div className="prose prose-sm prose-neutral dark:prose-invert mx-auto flex flex-col gap-8 py-24 max-w-[30rem]">
+        <div className="px-4 prose prose-sm prose-neutral dark:prose-invert mx-auto flex flex-col gap-8 py-16 sm:py-24 max-w-[30rem]">
           <Link href="/" aria-label="Home" className="w-fit">
             <Image
               width={32}
