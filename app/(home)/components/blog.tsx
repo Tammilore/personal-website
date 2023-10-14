@@ -22,12 +22,14 @@ export const Blog: FC = () => (
             className="flex items-center gap-4 justify-between"
             key={post.slug}
           >
-            <Link
-              href={post.slug}
+            <a
+              href={`https://www.beskar.co/${post.slug}`}
               className="m-0 text-neutral-900 text-sm truncate"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               {post.title}
-            </Link>
+            </a>
             <p className="w-[7rem] m-0 text-neutral-600 text-xs text-right">
               {formatDate(post.date)}
             </p>

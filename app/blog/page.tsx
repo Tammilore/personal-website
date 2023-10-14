@@ -1,4 +1,3 @@
-import { Link } from '@/components/link';
 import { allBlogs } from '@/.contentlayer/generated';
 import { createMetadata } from '@/lib/metadata';
 import { formatDate, sortBlogPostByDate } from '@/lib/utils';
@@ -34,12 +33,14 @@ const Blog: FC = () => (
                 className="flex items-center gap-4 justify-between"
                 key={post.slug}
               >
-                <Link
+                <a
                   className="m-0 text-neutral-900 text-sm truncate"
-                  href={post.slug}
+                  href={`https://www.beskar.co/${post.slug}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   {post.title}
-                </Link>
+                </a>
                 <p className="w-[7rem] m-0 text-neutral-600 text-xs text-right">
                   {formatDate(post.date)}
                 </p>
