@@ -4,7 +4,7 @@ import clients from '@/data/clients.json';
 import type { FC } from 'react';
 
 const title = 'Clients';
-const description = 'Freelance and agency clients';
+const description = 'Past and current freelance and agency clients.';
 
 export const metadata = createMetadata({
   title,

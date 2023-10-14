@@ -4,7 +4,7 @@ import type { FC } from 'react';
 
 const title = 'Contact';
 const description =
-  'Have an idea for a project? Want to work together? Just want to say hi? Get in touch!';
+  'Want to work together, or just want to say hi? Get in touch!';
 
 export const metadata = createMetadata({
   title,
