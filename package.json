@@ -8,7 +8,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "email": "email dev",
+    "email": "email dev --port 3005",
     "export": "email export"
   },
   "dependencies": {
