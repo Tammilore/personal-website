@@ -1,5 +1,6 @@
 import {
   AvatarIcon,
+  ChatBubbleIcon,
   EnvelopeClosedIcon,
   HomeIcon,
   ListBulletIcon,
@@ -24,6 +25,7 @@ const pages = [
   { name: 'Mailing List', href: '/mailing-list', icon: EnvelopeClosedIcon },
   { name: 'Clients', href: '/clients', icon: AvatarIcon },
   { name: 'Apps', href: '/apps', icon: TokensIcon },
+  { name: 'Contact', href: '/contact', icon: ChatBubbleIcon },
 ];
 
 export const Navigation: FC = () => (
