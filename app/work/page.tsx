@@ -8,7 +8,7 @@ import type { FC } from 'react';
 const title = 'Work';
 const description = 'My previous and current roles.';
 
-export const metadata = createMetadata({ title, description, path: '/blog' });
+export const metadata = createMetadata({ title, description, path: '/work' });
 
 const Work: FC = () => (
   <>

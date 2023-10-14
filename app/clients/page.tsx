@@ -6,7 +6,11 @@ import type { FC } from 'react';
 const title = 'Clients';
 const description = 'Freelance and agency clients';
 
-export const metadata = createMetadata({ title, description, path: '/stack' });
+export const metadata = createMetadata({
+  title,
+  description,
+  path: '/clients',
+});
 
 const Stack: FC = () => (
   <>
