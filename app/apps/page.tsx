@@ -4,8 +4,8 @@ import { createMetadata } from '@/lib/metadata';
 import apps from '@/data/apps.json';
 import type { FC } from 'react';
 
-const title = 'Stack';
-const description = 'Tools and technologies I use.';
+const title = 'Apps';
+const description = 'Web and mobile apps, demos and experiments.';
 
 export const metadata = createMetadata({ title, description, path: '/apps' });
 
@@ -29,7 +29,7 @@ const Apps: FC = () => (
             <p className="m-0">
               <Link href={app.link}>{app.name}</Link>
               {app.caption ? (
-                <span className="ml-1 text-sm text-neutral-600">
+                <span className="ml-1 text-sm text-neutral-600 font-medium">
                   {app.caption.link ? (
                     <Link className="text-inherit" href={app.caption.link}>
                       ({app.caption.text})

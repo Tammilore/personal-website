@@ -2,7 +2,7 @@ import Image from 'next/image';
 import { Link } from '@/components/link';
 import { allWorks } from '@/.contentlayer/generated';
 import { createMetadata } from '@/lib/metadata';
-import { cn, sortByStartYear } from '@/lib/utils';
+import { sortByStartYear } from '@/lib/utils';
 import type { FC } from 'react';
 
 const title = 'Work';
@@ -19,10 +19,7 @@ const Work: FC = () => (
     <div className="flex flex-col gap-2">
       {allWorks.sort(sortByStartYear).map((job) => (
         <div
-          className={cn(
-            'flex items-center justify-between gap-4',
-            job.endYear && 'opacity-60'
-          )}
+          className="flex items-center justify-between gap-4"
           key={job.company}
         >
           <div className="flex items-center gap-4">

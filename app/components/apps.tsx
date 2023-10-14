@@ -28,7 +28,7 @@ export const Apps: FC = () => (
             <p className="m-0">
               <Link href={app.link}>{app.name}</Link>
               {app.caption ? (
-                <span className="ml-1 text-sm text-neutral-600">
+                <span className="ml-1 text-sm text-neutral-600 font-medium">
                   {app.caption.link ? (
                     <Link className="text-inherit" href={app.caption.link}>
                       ({app.caption.text})

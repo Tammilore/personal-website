@@ -59,6 +59,10 @@ export const Work = defineDocumentType(() => ({
       type: 'string',
       required: true,
     },
+    featured: {
+      type: 'boolean',
+      required: false,
+    },
   },
   computedFields: computeFields<'Work'>({}),
 }));

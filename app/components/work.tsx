@@ -9,24 +9,27 @@ export const Work: FC = () => (
     title="Work"
     footer={
       <>
-        Read more on <Link href="https://read.cv/haydenbleasel">read.cv</Link>
+        Browse more <Link href="/work">previous roles</Link>.
       </>
     }
   >
-    {allWorks.sort(sortByStartYear).map((job) => (
-      <div
-        className="flex items-center justify-between gap-4"
-        key={job.company}
-      >
-        <p className="m-0">
-          <Link href={job.slug}>
-            {job.role}, {job.company}
-          </Link>
-        </p>
-        <p className="m-0 text-neutral-600 text-xs">
-          {job.startYear} &mdash; {job.endYear ?? 'Present'}
-        </p>
-      </div>
-    ))}
+    {allWorks
+      .filter((job) => job.featured)
+      .sort(sortByStartYear)
+      .map((job) => (
+        <div
+          className="flex items-center justify-between gap-4"
+          key={job.company}
+        >
+          <p className="m-0">
+            <Link href={job.slug}>
+              {job.role}, {job.company}
+            </Link>
+          </p>
+          <p className="m-0 text-neutral-600 text-xs">
+            {job.startYear} &mdash; {job.endYear ?? 'Present'}
+          </p>
+        </div>
+      ))}
   </Section>
 );
