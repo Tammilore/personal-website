@@ -12,15 +12,15 @@
     "image": "/projects/forge.svg"
   },
   {
-    "name": "contentlayer-datapad",
-    "description": "Awesome Contentlayer configuration with GFM, LQIP, TOC and more.",
-    "link": "https://github.com/haydenbleasel/contentlayer-datapad",
-    "image": "/projects/datapad.svg"
-  },
-  {
     "name": "glimpse",
     "description": "Fast, unstyled link preview React component.",
     "link": "https://github.com/haydenbleasel/glimpse",
     "image": "/projects/glimpse.svg"
+  },
+  {
+    "name": "contentlayer-datapad",
+    "description": "Awesome Contentlayer configuration with GFM, LQIP, TOC and more.",
+    "link": "https://github.com/haydenbleasel/contentlayer-datapad",
+    "image": "/projects/datapad.svg"
   }
 ]
