@@ -27,7 +27,7 @@ export const Clients: FC = () => (
       {clients.map(({ name, image }) => (
         <div
           key={name}
-          className="flex items-center justify-center p-4 aspect-square ring-1 ring-neutral-200"
+          className="flex items-center justify-center p-4 aspect-square ring-1 ring-neutral-200 dark:ring-neutral-800"
         >
           <Image
             src={image}

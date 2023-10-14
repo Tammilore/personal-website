@@ -70,18 +70,18 @@ const WorkPage: FC<WorkPageProps> = ({ params }) => {
       <div>
         <div className="relative">
           <Link
-            className="absolute inline-flex items-center gap-1 text-xs -left-24 text-neutral-600 top-0.5"
+            className="absolute inline-flex items-center gap-1 text-xs -left-24 text-neutral-600 dark:text-neutral-400 top-0.5"
             href="/work"
           >
             <ArrowLeftIcon className="h-4 w-4" />
             Work
           </Link>
-          <h1 className="m-0 text-sm text-neutral-900 font-medium">
+          <h1 className="m-0 text-sm text-neutral-900 dark:text-white font-medium">
             {job.role}
           </h1>
         </div>
         <p className="my-1 mb-0">{job.company}</p>
-        <p className="text-neutral-600 text-xs mt-4">
+        <p className="text-neutral-600 dark:text-neutral-400 text-xs mt-4">
           {job.startYear} &mdash; {job.endYear ?? 'Present'} • {job.location}
         </p>
       </div>

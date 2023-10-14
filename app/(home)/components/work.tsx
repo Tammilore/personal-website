@@ -26,7 +26,7 @@ export const Work: FC = () => (
               {job.role}, {job.company}
             </Link>
           </p>
-          <p className="m-0 text-neutral-600 text-xs">
+          <p className="m-0 text-neutral-600 dark:text-neutral-400 text-xs">
             {job.startYear} &mdash; {job.endYear ?? 'Present'}
           </p>
         </div>

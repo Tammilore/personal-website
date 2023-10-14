@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { Link } from '@/components/link';
 import { sans } from '@/lib/fonts';
 import { cn, toJsonLd } from '@/lib/utils';
+import { NextThemeProvider } from '@/components/theme-provider';
 import type { FC, ReactNode } from 'react';
 import type { Person } from 'schema-dts';
 
@@ -64,25 +65,27 @@ const profileJsonLd = toJsonLd<Person>({
 });
 
 const RootLayout: FC<RootLayoutProps> = ({ children }) => (
-  <html lang="en">
+  <html lang="en" suppressHydrationWarning>
     <body
       className={cn(
         sans.variable,
         'bg-neutral-100 font-sans dark:bg-neutral-950 antialiased'
       )}
     >
-      <div className="prose prose-sm prose-neutral mx-auto flex flex-col gap-8 py-24 max-w-[30rem]">
-        <Link href="/" aria-label="Home" className="w-fit">
-          <Image
-            width={32}
-            height={32}
-            src="/avatar.jpg"
-            alt="Hayden Bleasel"
-            className="w-8 h-8 rounded-full object-cover m-0"
-          />
-        </Link>
-        <div className="flex flex-col gap-16">{children}</div>
-      </div>
+      <NextThemeProvider>
+        <div className="prose prose-sm prose-neutral dark:prose-invert mx-auto flex flex-col gap-8 py-24 max-w-[30rem]">
+          <Link href="/" aria-label="Home" className="w-fit">
+            <Image
+              width={32}
+              height={32}
+              src="/avatar.jpg"
+              alt="Hayden Bleasel"
+              className="w-8 h-8 rounded-full object-cover m-0"
+            />
+          </Link>
+          <div className="flex flex-col gap-16">{children}</div>
+        </div>
+      </NextThemeProvider>
       <Analytics />
       {/* eslint-disable-next-line react/no-danger, @typescript-eslint/naming-convention */}
       <div dangerouslySetInnerHTML={{ __html: profileJsonLd }} />

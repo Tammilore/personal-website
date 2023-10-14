@@ -20,8 +20,12 @@ const blogPostsByYear = allBlogs.reduce<Record<number, typeof allBlogs>>(
 const Blog: FC = () => (
   <>
     <section className="flex flex-col gap-1">
-      <p className="m-0 text-neutral-900 font-medium text-sm">{title}</p>
-      <p className="m-0 text-neutral-600 text-sm">{description}</p>
+      <p className="m-0 text-neutral-900 dark:text-white font-medium text-sm">
+        {title}
+      </p>
+      <p className="m-0 text-neutral-600 dark:text-neutral-400 text-sm">
+        {description}
+      </p>
     </section>
     <div className="flex flex-col gap-2">
       {Object.entries(blogPostsByYear)
@@ -34,14 +38,14 @@ const Blog: FC = () => (
                 key={post.slug}
               >
                 <a
-                  className="m-0 text-neutral-900 text-sm truncate"
+                  className="m-0 text-neutral-900 dark:text-white text-sm truncate"
                   href={`https://www.beskar.co/${post.slug}`}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   {post.title}
                 </a>
-                <p className="w-[7rem] m-0 text-neutral-600 text-xs text-right">
+                <p className="w-[7rem] m-0 text-neutral-600 dark:text-neutral-400 text-xs text-right">
                   {formatDate(post.date)}
                 </p>
               </div>

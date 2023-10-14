@@ -23,8 +23,12 @@ const stackByType = stack.reduce<Record<string, typeof stack>>((acc, post) => {
 const Stack: FC = () => (
   <>
     <section className="flex flex-col gap-1">
-      <p className="m-0 text-neutral-900 font-medium text-sm">{title}</p>
-      <p className="m-0 text-neutral-600 text-sm">{description}</p>
+      <p className="m-0 text-neutral-900 dark:text-white font-medium text-sm">
+        {title}
+      </p>
+      <p className="m-0 text-neutral-600 dark:text-neutral-400 text-sm">
+        {description}
+      </p>
     </section>
     <div className="flex flex-col gap-2">
       {Object.entries(stackByType).map(([type, items]) => (
@@ -35,12 +39,12 @@ const Stack: FC = () => (
               key={tool.name}
             >
               <Link
-                className="m-0 text-neutral-900 text-sm truncate w-[7rem]"
+                className="m-0 text-neutral-900 dark:text-white text-sm truncate w-[7rem]"
                 href={tool.href}
               >
                 {tool.name}
               </Link>
-              <p className=" m-0 text-neutral-600 text-xs text-right">
+              <p className=" m-0 text-neutral-600 dark:text-neutral-400 text-xs text-right">
                 {tool.description}
               </p>
             </div>

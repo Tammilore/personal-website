@@ -27,7 +27,9 @@ export const Projects: FC = () => (
           <p className="m-0">
             <Link href={project.link}>{project.name}</Link>
           </p>
-          <p className="m-0 text-neutral-600 text-xs">{project.description}</p>
+          <p className="m-0 text-neutral-600 dark:text-neutral-400 text-xs">
+            {project.description}
+          </p>
         </div>
       </div>
     ))}
