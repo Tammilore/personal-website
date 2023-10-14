@@ -31,21 +31,29 @@ const pages = [
 
 export const Navigation: FC = () => (
   <div className="bg-white/90 px-2 z-50 backdrop-blur-sm border border-neutral-200 shadow fixed left-1/2 -translate-x-1/2 bottom-8 rounded-full">
-    <div className="flex items-center gap-2 p-2">
+    <div className="flex items-center p-1">
       {pages.map(({ name, href, icon: Icon }) => (
         <Tooltip key={name} delayDuration={0}>
           <TooltipTrigger asChild>
             <Link href={href}>
-              <ActiveProvider href={href} className="p-2 relative rounded-full">
-                <Icon
+              <ActiveProvider href={href}>
+                <div
                   className={cn(
-                    'w-4 h-4 transition-colors',
-                    'text-neutral-600 hover:text-neutral-900',
-                    'dark:text-neutral-400 dark:hover:text-white',
-                    'group-[.active-page]:text-neutral-900',
-                    'dark:group-[.active-page]:dark:text-white'
+                    'p-3 bg-transparent transition-colors relative rounded-full',
+                    'group-[.active-page]:bg-neutral-100',
+                    'dark:group-[.active-page]:bg-neutral-800'
                   )}
-                />
+                >
+                  <Icon
+                    className={cn(
+                      'w-4 h-4 transition-colors',
+                      'text-neutral-600 hover:text-neutral-900',
+                      'dark:text-neutral-400 dark:hover:text-white',
+                      'group-[.active-page]:text-neutral-900',
+                      'dark:group-[.active-page]:dark:text-white'
+                    )}
+                  />
+                </div>
               </ActiveProvider>
             </Link>
           </TooltipTrigger>
