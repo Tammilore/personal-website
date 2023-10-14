@@ -9,17 +9,6 @@ const description = 'Tools and technologies I use.';
 
 export const metadata = createMetadata({ title, description, path: '/stack' });
 
-const stackByType = stack.reduce<Record<string, typeof stack>>((acc, post) => {
-  const { type } = post;
-
-  // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
-  if (Object.hasOwnProperty.call(acc, type)) {
-    acc.type = [...acc.type, post];
-  }
-
-  return { ...acc, [type]: [post] };
-}, {});
-
 const Stack: FC = () => (
   <>
     <section className="flex flex-col gap-1">
@@ -31,7 +20,7 @@ const Stack: FC = () => (
       </p>
     </section>
     <div className="flex flex-col gap-2">
-      {Object.entries(stackByType).map(([type, items]) => (
+      {stack.map(({ type, items }) => (
         <Section title={type} key={type}>
           {items.map((tool) => (
             <div

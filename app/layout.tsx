@@ -5,6 +5,7 @@ import { Link } from '@/components/link';
 import { sans } from '@/lib/fonts';
 import { cn, toJsonLd } from '@/lib/utils';
 import { NextThemeProvider } from '@/components/theme-provider';
+import { Navigation } from '@/components/navigation';
 import type { FC, ReactNode } from 'react';
 import type { Person } from 'schema-dts';
 
@@ -85,6 +86,7 @@ const RootLayout: FC<RootLayoutProps> = ({ children }) => (
           </Link>
           <div className="flex flex-col gap-16">{children}</div>
         </div>
+        <Navigation />
       </NextThemeProvider>
       <Analytics />
       {/* eslint-disable-next-line react/no-danger, @typescript-eslint/naming-convention */}
