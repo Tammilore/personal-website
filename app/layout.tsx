@@ -63,29 +63,6 @@ const profileJsonLd = toJsonLd<Person>({
   },
 });
 
-const socialLinks = [
-  {
-    href: 'https://twitter.com/haydenbleasel',
-    name: 'Twitter',
-    image: '/images/social/twitter.svg',
-  },
-  {
-    href: 'https://github.com/haydenbleasel',
-    name: 'GitHub',
-    image: '/images/social/github.svg',
-  },
-  {
-    href: 'https://dribbble.com/haydenbleasel',
-    name: 'Dribbble',
-    image: '/images/social/dribbble.svg',
-  },
-  {
-    href: 'https://www.linkedin.com/in/haydenbleasel/',
-    name: 'LinkedIn',
-    image: '/images/social/linkedin.svg',
-  },
-];
-
 const RootLayout: FC<RootLayoutProps> = ({ children }) => (
   <html lang="en">
     <body

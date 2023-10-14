@@ -5,6 +5,7 @@ import { Hero } from './components/hero';
 import { Apps } from './components/apps';
 import { Projects } from './components/projects';
 import { Blog } from './components/blog';
+import { Social } from './components/social';
 import type { Metadata } from 'next';
 import type { FC } from 'react';
 
@@ -25,6 +26,7 @@ const Home: FC = () => (
     <Apps />
     <Projects />
     <Blog />
+    <Social />
   </>
 );
 
