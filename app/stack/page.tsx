@@ -7,14 +7,20 @@ import type { FC } from 'react';
 const title = 'Stack';
 const description = 'Tools and technologies I use.';
 
-export const metadata = createMetadata({ title, description, path: '/blog' });
+export const metadata = createMetadata({ title, description, path: '/stack' });
 
-const stackByType = stack.reduce<Record<number, typeof stack>>((acc, post) => {
+const stackByType = stack.reduce<Record<string, typeof stack>>((acc, post) => {
   const { type } = post;
-  return { ...acc, [type]: [...(acc[type] || []), post] };
+
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
+  if (Object.hasOwnProperty.call(acc, type)) {
+    acc.type = [...acc.type, post];
+  }
+
+  return { ...acc, [type]: [post] };
 }, {});
 
-const Blog: FC = () => (
+const Stack: FC = () => (
   <>
     <section className="flex flex-col gap-1">
       <p className="m-0 text-neutral-900 font-medium text-sm">{title}</p>
@@ -45,4 +51,4 @@ const Blog: FC = () => (
   </>
 );
 
-export default Blog;
+export default Stack;

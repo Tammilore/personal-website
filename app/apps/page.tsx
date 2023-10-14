@@ -1,21 +1,22 @@
 import Image from 'next/image';
 import { Link } from '@/components/link';
-import { Section } from '@/components/section';
+import { createMetadata } from '@/lib/metadata';
 import apps from '@/data/apps.json';
 import type { FC } from 'react';
 
-export const Apps: FC = () => (
-  <Section
-    title="Apps"
-    footer={
-      <>
-        <Link href="/apps">Click here</Link> to view more apps.
-      </>
-    }
-  >
-    {apps
-      .filter(({ featured }) => featured)
-      .map((app) => (
+const title = 'Stack';
+const description = 'Tools and technologies I use.';
+
+export const metadata = createMetadata({ title, description, path: '/apps' });
+
+const Apps: FC = () => (
+  <>
+    <section className="flex flex-col gap-1">
+      <p className="m-0 text-neutral-900 font-medium text-sm">{title}</p>
+      <p className="m-0 text-neutral-600 text-sm">{description}</p>
+    </section>
+    <div className="flex flex-col gap-2">
+      {apps.map((app) => (
         <div className="flex items-center gap-4" key={app.name}>
           <Image
             src={app.image}
@@ -45,5 +46,8 @@ export const Apps: FC = () => (
           </div>
         </div>
       ))}
-  </Section>
+    </div>
+  </>
 );
+
+export default Apps;
