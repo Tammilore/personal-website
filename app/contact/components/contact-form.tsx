@@ -14,6 +14,7 @@ import {
 } from '@/components/ui/form';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
 import type { FC } from 'react';
 
 const formSchema = z.object({
@@ -22,15 +23,19 @@ const formSchema = z.object({
   message: z.string().min(10).max(500),
 });
 
+type FormValues = z.infer<typeof formSchema>;
+
 export const ContactForm: FC = () => {
-  const form = useFormField<z.infer<typeof formSchema>>({
+  const form = useFormField<FormValues>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      username: '',
+      name: '',
+      email: '',
+      message: '',
     },
   });
 
-  const onSubmit = (values: z.infer<typeof formSchema>) => {
+  const onSubmit = (values: FormValues) => {
     /*
      * Do something with the form values.
      * ✅ This will be type-safe and validated.
@@ -52,6 +57,41 @@ export const ContactForm: FC = () => {
               </FormControl>
               <FormDescription>
                 Enter your full name, first and last.
+              </FormDescription>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="email"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Email</FormLabel>
+              <FormControl>
+                <Input placeholder="janesmith@acme.com" {...field} />
+              </FormControl>
+              <FormDescription>
+                Enter your email address so I can get back to you.
+              </FormDescription>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="message"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Message</FormLabel>
+              <FormControl>
+                <Textarea
+                  placeholder="Hello, I'd like to talk about..."
+                  {...field}
+                />
+              </FormControl>
+              <FormDescription>
+                Enter your message here. Please be as detailed as possible.
               </FormDescription>
               <FormMessage />
             </FormItem>
