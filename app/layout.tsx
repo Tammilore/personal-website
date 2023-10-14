@@ -4,8 +4,8 @@ import Image from 'next/image';
 import { Link } from '@/components/link';
 import { sans } from '@/lib/fonts';
 import { cn, toJsonLd } from '@/lib/utils';
-import { NextThemeProvider } from '@/components/theme-provider';
 import { Navigation } from '@/components/navigation';
+import { Providers } from '@/components/providers';
 import type { FC, ReactNode } from 'react';
 import type { Person } from 'schema-dts';
 
@@ -73,7 +73,7 @@ const RootLayout: FC<RootLayoutProps> = ({ children }) => (
         'bg-neutral-100 font-sans dark:bg-neutral-950 antialiased'
       )}
     >
-      <NextThemeProvider>
+      <Providers>
         <div className="prose prose-sm prose-neutral dark:prose-invert mx-auto flex flex-col gap-8 py-24 max-w-[30rem]">
           <Link href="/" aria-label="Home" className="w-fit">
             <Image
@@ -87,7 +87,7 @@ const RootLayout: FC<RootLayoutProps> = ({ children }) => (
           <div className="flex flex-col gap-16">{children}</div>
         </div>
         <Navigation />
-      </NextThemeProvider>
+      </Providers>
       <Analytics />
       {/* eslint-disable-next-line react/no-danger, @typescript-eslint/naming-convention */}
       <div dangerouslySetInnerHTML={{ __html: profileJsonLd }} />
