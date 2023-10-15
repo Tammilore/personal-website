@@ -47,11 +47,7 @@
     "name": "Neutral App",
     "description": "Join the carbon neutral community.",
     "link": "https://tryneutral.com/",
-    "image": "/apps/neutral.svg",
-    "caption": {
-      "text": "closed",
-      "link": "/apps/neutral"
-    }
+    "image": "/apps/neutral.svg"
   },
   {
     "name": "Hancock",
