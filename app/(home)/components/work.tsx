@@ -18,7 +18,7 @@ export const Work: FC = () => (
       .sort(sortByStartYear)
       .map((job) => (
         <div
-          className="flex items-center justify-between gap-4"
+          className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 sm:gap-4"
           key={job.company}
         >
           <p className="m-0">

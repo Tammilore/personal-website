@@ -35,16 +35,16 @@ const Blog: FC = () => (
           <Section title={year} key={year}>
             {posts.sort(sortBlogPostByDate).map((post) => (
               <div
-                className="flex items-center gap-4 justify-between"
+                className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-4 justify-between"
                 key={post.slug}
               >
                 <Link
-                  className="m-0 text-neutral-900 dark:text-white text-sm truncate"
+                  className="m-0 text-neutral-900 dark:text-white text-sm sm:truncate"
                   href={post.slug}
                 >
                   {post.title}
                 </Link>
-                <p className="w-[7rem] m-0 text-neutral-600 dark:text-neutral-400 text-xs text-right">
+                <p className="w-[7rem] m-0 text-neutral-600 dark:text-neutral-400 text-xs sm:text-right">
                   {formatDate(post.date)}
                 </p>
               </div>

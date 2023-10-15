@@ -24,8 +24,11 @@ const Speaking: FC = () => (
     </section>
     <div className="flex flex-col gap-2">
       {speaking.map(({ location, name, year, href }) => (
-        <div className="flex items-center justify-between gap-4" key={name}>
-          <p className="m-0 truncate font-medium text-neutral-900 dark:text-white">
+        <div
+          className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 sm:gap-4"
+          key={name}
+        >
+          <p className="m-0 sm:truncate font-medium text-neutral-900 dark:text-white">
             {href ? (
               <Link href={href}>
                 {name}, {location}
@@ -34,7 +37,7 @@ const Speaking: FC = () => (
               `${name}, ${location}`
             )}
           </p>
-          <p className="m-0 text-neutral-600 dark:text-neutral-400 text-xs w-10 text-right shrink-0">
+          <p className="m-0 text-neutral-600 dark:text-neutral-400 text-xs w-10 sm:text-right shrink-0">
             {year}
           </p>
         </div>

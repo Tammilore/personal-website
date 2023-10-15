@@ -19,16 +19,16 @@ export const Blog: FC = () => (
         .slice(0, 5)
         .map((post) => (
           <div
-            className="flex items-center gap-4 justify-between"
+            className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-4 justify-between"
             key={post.slug}
           >
             <Link
               href={post.slug}
-              className="m-0 text-neutral-900 dark:text-white text-sm truncate"
+              className="m-0 text-neutral-900 dark:text-white text-sm sm:truncate"
             >
               {post.title}
             </Link>
-            <p className="w-[7rem] m-0 text-neutral-600 dark:text-neutral-400 text-xs text-right">
+            <p className="w-[7rem] m-0 text-neutral-600 dark:text-neutral-400 text-xs sm:text-right">
               {formatDate(post.date)}
             </p>
           </div>

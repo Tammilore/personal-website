@@ -24,16 +24,16 @@ const Stack: FC = () => (
         <Section title={type} key={type}>
           {items.map((tool) => (
             <div
-              className="flex items-center gap-4 justify-between"
+              className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-4 justify-between"
               key={tool.name}
             >
               <Link
-                className="m-0 text-neutral-900 dark:text-white text-sm truncate w-[7rem]"
+                className="m-0 text-neutral-900 dark:text-white text-sm sm:truncate w-[7rem]"
                 href={tool.href}
               >
                 {tool.name}
               </Link>
-              <p className=" m-0 text-neutral-600 dark:text-neutral-400 text-xs text-right">
+              <p className="m-0 text-neutral-600 dark:text-neutral-400 text-xs sm:text-right">
                 {tool.description}
               </p>
             </div>

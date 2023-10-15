@@ -132,7 +132,7 @@ export const ContactForm: FC = () => {
             </FormItem>
           )}
         />
-        <Button type="submit" disabled={sending}>
+        <Button type="submit" disabled={sending} className="w-full sm:w-fit">
           {sending ? (
             <svg
               className="animate-spin h-5 w-5 text-white"

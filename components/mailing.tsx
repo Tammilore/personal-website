@@ -88,7 +88,7 @@ export const MailingList: FC = () => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="flex items-center gap-2 max-w-sm w-full"
+      className="flex flex-col sm:flex-row sm:items-center gap-2 max-w-sm w-full"
     >
       <Input
         type="text"

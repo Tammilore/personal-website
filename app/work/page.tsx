@@ -23,7 +23,7 @@ const Work: FC = () => (
     <div className="flex flex-col gap-2">
       {allWorks.sort(sortByStartYear).map((job) => (
         <div
-          className="flex items-center justify-between gap-4"
+          className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 sm:gap-4"
           key={job.company}
         >
           <div className="flex items-center gap-4">
@@ -44,7 +44,7 @@ const Work: FC = () => (
               </p>
             </div>
           </div>
-          <p className="m-0 text-neutral-600 dark:text-neutral-400 text-xs">
+          <p className="m-0 text-neutral-600 dark:text-neutral-400 text-xs ml-[52px] sm:ml-0">
             {job.startYear} &mdash; {job.endYear ?? 'Present'}
           </p>
         </div>
