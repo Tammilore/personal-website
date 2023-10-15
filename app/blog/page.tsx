@@ -2,6 +2,7 @@ import { allBlogs } from '@/.contentlayer/generated';
 import { createMetadata } from '@/lib/metadata';
 import { formatDate, sortBlogPostByDate } from '@/lib/utils';
 import { Section } from '@/components/section';
+import { Link } from '@/components/link';
 import type { FC } from 'react';
 
 const title = 'Blog';
@@ -37,14 +38,12 @@ const Blog: FC = () => (
                 className="flex items-center gap-4 justify-between"
                 key={post.slug}
               >
-                <a
+                <Link
                   className="m-0 text-neutral-900 dark:text-white text-sm truncate"
-                  href={`https://www.beskar.co/${post.slug}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href={post.slug}
                 >
                   {post.title}
-                </a>
+                </Link>
                 <p className="w-[7rem] m-0 text-neutral-600 dark:text-neutral-400 text-xs text-right">
                   {formatDate(post.date)}
                 </p>
