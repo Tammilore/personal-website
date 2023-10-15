@@ -28,7 +28,7 @@
     "clsx": "^2.0.0",
     "concurrently": "^8.2.1",
     "contentlayer": "^0.3.4",
-    "contentlayer-datapad": "^1.0.19",
+    "contentlayer-datapad": "^1.0.21",
     "lodash.merge": "^4.6.2",
     "next": "13.5.4",
     "next-contentlayer": "^0.3.4",
