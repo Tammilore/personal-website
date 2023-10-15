@@ -28,9 +28,10 @@ export const Intro: FC = () => (
       If you&apos;re interested, please get in touch.
     </p>
     <p>
-      Also, I have a private mailing list where I keep 1000+ people up to date
-      with what I&apos;m working on. Feel free to join if you&apos;re
-      interested.
+      Also, I have a <Link href="https://store.haydenbleasel.com/">store</Link>{' '}
+      where I sell cool merch; and a private mailing list where I keep 1000+
+      people up to date with what I&apos;m working on. Feel free to join if
+      you&apos;re interested.
     </p>
     <MailingList />
   </section>
