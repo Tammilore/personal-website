@@ -67,9 +67,34 @@ export const Work = defineDocumentType(() => ({
   computedFields: computeFields<'Work'>({}),
 }));
 
+export const App = defineDocumentType(() => ({
+  name: 'App',
+  filePathPattern: `app/**/*.mdx`,
+  contentType: 'mdx',
+  fields: {
+    title: {
+      type: 'string',
+      required: true,
+    },
+    description: {
+      type: 'string',
+      required: true,
+    },
+    date: {
+      type: 'date',
+      required: true,
+    },
+    image: {
+      type: 'string',
+      required: false,
+    },
+  },
+  computedFields: computeFields<'App'>({}),
+}));
+
 const source = makeSource({
   contentDirPath: './content',
-  documentTypes: [Blog, Work],
+  documentTypes: [Blog, Work, App],
   mdx: {
     remarkPlugins: remarkPlugins(),
     rehypePlugins: rehypePlugins({

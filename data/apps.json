@@ -7,7 +7,7 @@
     "image": "/apps/refraction.png",
     "caption": {
       "text": "acquired",
-      "link": "https://www.beskar.co/blog/refraction"
+      "link": "/apps/refraction"
     }
   },
   {
@@ -50,7 +50,7 @@
     "image": "/apps/neutral.svg",
     "caption": {
       "text": "closed",
-      "link": "https://www.beskar.co/blog/neutral"
+      "link": "/apps/neutral"
     }
   },
   {
@@ -62,7 +62,7 @@
   {
     "name": "Presumi",
     "description": "How I started a data analytics startup and partnered with SEEK.",
-    "link": "https://www.beskar.co/blog/presumi",
+    "link": "/apps/presumi",
     "image": "/apps/presumi.svg",
     "caption": {
       "text": "closed"
@@ -102,7 +102,7 @@
     "image": "/apps/desync.png",
     "caption": {
       "text": "transferred",
-      "link": "https://www.beskar.co/blog/desync"
+      "link": "/apps/desync"
     }
   },
   {
