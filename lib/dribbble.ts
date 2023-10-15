@@ -21,7 +21,7 @@ export const fetchDribbbleShot = async (
   id: number
 ): Promise<DribbbleResponse> => {
   const response = await fetch(`https://dribbble.com/shots/${id}`);
-  const data = await response.text();
+  const data = (await response.text()) as string;
 
   const dom = parse(data);
 

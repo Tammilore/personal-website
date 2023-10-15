@@ -13,6 +13,7 @@ export const metadata = createMetadata({ title, description, path: '/blog' });
 const blogPostsByYear = allBlogs.reduce<Record<number, typeof allBlogs>>(
   (acc, post) => {
     const year = new Date(post.date).getFullYear();
+    // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
     return { ...acc, [year]: [...(acc[year] || []), post] };
   },
   {}

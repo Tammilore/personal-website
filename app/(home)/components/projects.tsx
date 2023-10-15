@@ -54,7 +54,7 @@ export const Projects: FC = () => (
     }
   >
     {projects.map((project) => (
-      <Project data={project} />
+      <Project data={project} key={project.name} />
     ))}
   </Section>
 );
