@@ -61,7 +61,8 @@
     "link": "/apps/presumi",
     "image": "/apps/presumi.svg",
     "caption": {
-      "text": "closed"
+      "text": "closed",
+      "link": "/apps/presumi"
     }
   },
   {
