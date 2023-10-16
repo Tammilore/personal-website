@@ -98,7 +98,7 @@ const source = makeSource({
   mdx: {
     remarkPlugins: remarkPlugins(),
     rehypePlugins: rehypePlugins({
-      theme: 'nord',
+      theme: 'one-dark-pro',
     }),
   },
 });
