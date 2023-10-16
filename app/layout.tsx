@@ -7,6 +7,7 @@ import { cn, toJsonLd } from '@/lib/utils';
 import { Navigation } from '@/components/navigation';
 import { Providers } from '@/components/providers';
 import { Toaster } from '@/components/ui/toaster';
+import { ScrollArea } from '@/components/ui/scroll-area';
 import type { FC, ReactNode } from 'react';
 import type { Person } from 'schema-dts';
 
@@ -74,21 +75,23 @@ const RootLayout: FC<RootLayoutProps> = ({ children }) => (
         'bg-neutral-100 font-sans dark:bg-neutral-950 antialiased'
       )}
     >
-      <Providers>
-        <div className="px-4 prose prose-sm prose-neutral dark:prose-invert mx-auto flex flex-col gap-8 py-16 sm:py-24 max-w-[30rem]">
-          <Link href="/" aria-label="Home" className="w-fit">
-            <Image
-              width={32}
-              height={32}
-              src="/avatar.jpg"
-              alt="Hayden Bleasel"
-              className="w-8 h-8 rounded-full object-cover m-0"
-            />
-          </Link>
-          <div className="flex flex-col gap-16">{children}</div>
-        </div>
-        <Navigation />
-      </Providers>
+      <ScrollArea>
+        <Providers>
+          <div className="px-4 prose prose-sm prose-neutral dark:prose-invert mx-auto flex flex-col gap-8 py-16 sm:py-24 max-w-[30rem]">
+            <Link href="/" aria-label="Home" className="w-fit">
+              <Image
+                width={32}
+                height={32}
+                src="/avatar.jpg"
+                alt="Hayden Bleasel"
+                className="w-8 h-8 rounded-full object-cover m-0"
+              />
+            </Link>
+            <div className="flex flex-col gap-16">{children}</div>
+          </div>
+          <Navigation />
+        </Providers>
+      </ScrollArea>
       <Analytics />
       <Toaster />
       {/* eslint-disable-next-line react/no-danger, @typescript-eslint/naming-convention */}
