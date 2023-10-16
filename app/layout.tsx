@@ -80,7 +80,7 @@ const RootLayout: FC<RootLayoutProps> = ({ children }) => (
           <div
             className={cn(
               'px-4 mx-auto flex flex-col gap-8 py-16 sm:py-24 max-w-[30rem]',
-              'prose prose-sm prose-neutral prose-pre:text-sm',
+              'prose prose-sm prose-neutral',
               'dark:prose-invert'
             )}
           >
