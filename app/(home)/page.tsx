@@ -1,3 +1,4 @@
+import { get } from '@vercel/edge-config';
 import { createMetadata } from '@/lib/metadata';
 import { Work } from './components/work';
 import { Intro } from './components/intro';
@@ -7,8 +8,10 @@ import { Projects } from './components/projects';
 import { Blog } from './components/blog';
 import { Social } from './components/social';
 import { Clients } from './components/clients';
+import { Announcement } from './components/announcement';
+import type { AnnouncementProps } from './components/announcement';
 import type { Metadata } from 'next';
-import type { FC } from 'react';
+import type { ReactElement } from 'react';
 
 const title = 'Product Designer and TypeScript Developer';
 const description =
@@ -19,17 +22,22 @@ export const metadata: Metadata = createMetadata({
   description,
 });
 
-const Home: FC = () => (
-  <>
-    <Hero />
-    <Intro />
-    <Work />
-    <Apps />
-    <Projects />
-    <Blog />
-    <Clients />
-    <Social />
-  </>
-);
+const Home = async (): Promise<ReactElement> => {
+  const announcement = await get<AnnouncementProps>('announcement');
+
+  return (
+    <>
+      <Hero />
+      {announcement ? <Announcement {...announcement} /> : null}
+      <Intro />
+      <Work />
+      <Apps />
+      <Projects />
+      <Blog />
+      <Clients />
+      <Social />
+    </>
+  );
+};
 
 export default Home;
