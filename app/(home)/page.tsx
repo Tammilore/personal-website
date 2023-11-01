@@ -1,4 +1,4 @@
-import { get } from '@vercel/edge-config';
+// import { get } from '@vercel/edge-config';
 import { createMetadata } from '@/lib/metadata';
 import { Work } from './components/work';
 import { Intro } from './components/intro';
@@ -23,7 +23,11 @@ export const metadata: Metadata = createMetadata({
 });
 
 const Home = async (): Promise<ReactElement> => {
-  const announcement = await get<AnnouncementProps>('announcement');
+  const announcement: AnnouncementProps = {
+    text: '',
+    cta: '',
+    link: '',
+  };
 
   return (
     <>
