@@ -1,4 +1,3 @@
-import work from '../../../data/work.json';
 import { allWorks } from '@contentlayer/generated';
 import { Link } from '@/components/link';
 import { Section } from '@/components/section';
