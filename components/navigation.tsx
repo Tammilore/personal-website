@@ -22,10 +22,10 @@ const pages = [
   { name: 'Blog', href: '/blog', icon: Pencil2Icon },
   { name: 'Stack', href: '/stack', icon: ReaderIcon },
   { name: 'Mailing List', href: '/mailing-list', icon: EnvelopeClosedIcon },
-  { name: 'Clients', href: '/clients', icon: AvatarIcon },
+  // { name: 'Clients', href: '/clients', icon: AvatarIcon },
   { name: 'Apps', href: '/apps', icon: TokensIcon },
-  { name: 'Speaking', href: '/speaking', icon: CalendarIcon },
-  { name: 'Features', href: '/features', icon: GlobeIcon },
+  // { name: 'Speaking', href: '/speaking', icon: CalendarIcon },
+  // { name: 'Features', href: '/features', icon: GlobeIcon },
   { name: 'Contact', href: '/contact', icon: ChatBubbleIcon },
 ];
 

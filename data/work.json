@@ -1,0 +1,24 @@
+[
+  {
+    "featured": true,
+    "startYear": 2022,
+    "endYear": 2023,
+    "slug": "/work/work-1",
+    "role": "Software Developer",
+    "company": "Company 1",
+    "imageBlur": "encodedstring",
+    "image": "",
+    "location": ""
+  },
+  {
+    "featured": true,
+    "startYear": 2022,
+    "endYear": 2023,
+    "slug": "/work/work-2",
+    "role": "Software Developer",
+    "company": "Company 2",
+    "imageBlur": "encodedstring",
+    "image": "",
+    "location": ""
+  }
+]

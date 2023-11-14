@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { Link } from '@/components/link';
-import { allWorks } from '@/.contentlayer/generated';
+import { allWorks } from '@contentlayer/generated';
+import work from '../../data/work.json';
 import { createMetadata } from '@/lib/metadata';
 import { sortByStartYear } from '@/lib/utils';
 import type { FC } from 'react';

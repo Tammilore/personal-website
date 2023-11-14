@@ -1,22 +1,22 @@
 import { Link } from '@/components/link';
-import { allBlogs } from '@contentlayer/generated';
+import { allThoughts } from '@contentlayer/generated';
 import { Section } from '@/components/section';
-import { formatDate, sortBlogPostByDate } from '@/lib/utils';
+import { formatDate, sortThoughtsPostByDate } from '@/lib/utils';
 import type { FC } from 'react';
 
-export const Blog: FC = () => (
+export const Thoughts: FC = () => (
   <Section
-    title="Blog"
+    title="Thinking Out Loud"
     footer={
       <>
-        Keep reading on <Link href="/blog">the blog</Link>.
+        <Link href="/thoughts">Read</Link> a couple more tidbits.
       </>
     }
   >
     <div className="flex flex-col gap-2">
-      {allBlogs
-        .sort(sortBlogPostByDate)
-        .slice(0, 5)
+      {allThoughts
+        .sort(sortThoughtsPostByDate)
+        .slice(0, 3)
         .map((post) => (
           <div
             className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-4 justify-between"

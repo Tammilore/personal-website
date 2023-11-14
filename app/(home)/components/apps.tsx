@@ -6,10 +6,10 @@ import type { FC } from 'react';
 
 export const Apps: FC = () => (
   <Section
-    title="Apps"
+    title="Products"
     footer={
       <>
-        <Link href="/apps">Click here</Link> to view more apps.
+        <Link href="/apps">Click here</Link> to view older products.
       </>
     }
   >

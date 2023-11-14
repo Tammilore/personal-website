@@ -88,8 +88,8 @@ const RootLayout: FC<RootLayoutProps> = ({ children }) => (
               <Image
                 width={32}
                 height={32}
-                src="/avatar.jpg"
-                alt="Hayden Bleasel"
+                src="/icon.png"
+                alt="Tamilore Lawal"
                 className="w-8 h-8 rounded-full object-cover m-0"
               />
             </Link>

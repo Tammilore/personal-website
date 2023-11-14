@@ -1,26 +1,23 @@
 [
   {
-    "name": "eslint-config-harmony",
+    "name": "Identitypass",
     "description": "Strict, opinionated ESLint config for modern TypeScript apps.",
     "link": "https://github.com/haydenbleasel/eslint-config-harmony",
-    "image": "/projects/harmony.svg"
+    "image": "/projects/harmony.svg",
+    "featured": true
   },
   {
-    "name": "next-forge",
+    "name": "Paystack",
     "description": "Robust and comprehensive boilerplate for modern Next.js web apps.",
     "link": "https://github.com/haydenbleasel/next-forge",
-    "image": "/projects/forge.svg"
+    "image": "/projects/forge.svg",
+    "featured": true
   },
   {
-    "name": "react-glimpse",
+    "name": "Fullgap",
     "description": "Fast, unstyled link preview React component.",
     "link": "https://github.com/haydenbleasel/react-glimpse",
-    "image": "/projects/glimpse.svg"
-  },
-  {
-    "name": "contentlayer-datapad",
-    "description": "Awesome Contentlayer configuration with GFM, LQIP, TOC and more.",
-    "link": "https://github.com/haydenbleasel/contentlayer-datapad",
-    "image": "/projects/datapad.svg"
+    "image": "/projects/glimpse.svg",
+    "featured": true
   }
 ]
