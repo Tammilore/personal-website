@@ -14,7 +14,8 @@ export const Work: FC = () => (
     }
   >
     {allWorks
-      .filter((job) => job.featured)
+      .filter((job) => job)
+      .slice(0, 4)
       .sort(sortByStartYear)
       .map((job) => (
         <div
