@@ -3,8 +3,8 @@
     "type": "Coding",
     "items": [
       {
-        "name": "GitHub Desktop",
-        "href": "https://desktop.github.com/",
+        "name": "GitHub",
+        "href": "https://github.com/",
         "description": "Simple repository management."
       },
       {
@@ -15,32 +15,72 @@
       {
         "name": "VS Code",
         "href": "https://code.visualstudio.com/",
-        "description": "The code editor for the modern web."
+        "description": "Modern IDE and code editor."
       },
       {
-        "name": "GitHub Copilot",
-        "href": "https://copilot.github.com/",
-        "description": "AI-powered code completion."
+        "name": "Continue",
+        "href": "https://continue.dev/",
+        "description": "Autopilot for software development."
       },
       {
-        "name": "Hyper",
-        "href": "https://hyper.is/",
-        "description": "Extensible and minimal Electron-based terminal."
+        "name": "Anima App",
+        "href": "https://animaapp.com/",
+        "description": "AI design to code."
+      },
+      {
+        "name": "Subframe",
+        "href": "https://subframe.com/",
+        "description": "Export your designs to React code."
       }
     ]
   },
   {
-    "type": "Security",
+    "type": "No-code",
     "items": [
       {
-        "name": "1Password",
-        "href": "https://1password.com/",
-        "description": "Stop remembering passwords."
+        "name": "Xano",
+        "href": "https://xano.com/",
+        "description": "Backend development without writing code."
       },
       {
-        "name": "NordVPN",
-        "href": "https://ref.nordvpn.com/LtLyFxYFRmA",
-        "description": "Secure and private internet access."
+        "name": "Bubble",
+        "href": "https://bubble.io",
+        "description": "The easiest way to build web apps without code."
+      },
+      {
+        "name": "Softr",
+        "href": "https://softr.io",
+        "description": "Build custom apps from simple databases."
+      },
+      {
+        "name": "Zapier",
+        "href": "https://zapier.com",
+        "description": "Automate your workflows. Fast."
+      },
+      {
+        "name": "Make",
+        "href": "https://make.com",
+        "description": "Connect and integrate apps to your software."
+      },
+      {
+        "name": "Adalo",
+        "href": "https://adalo.com",
+        "description": "Build and launch mobile apps. No-code required."
+      },
+      {
+        "name": "Flutterflow",
+        "href": "https://flutterflow.io",
+        "description": "Low code tool to build beautiful, modern apps."
+      },
+      {
+        "name": "Airtable",
+        "href": "https://airtable.com",
+        "description": "Powerful database for your apps"
+      },
+      {
+        "name": "Tally",
+        "href": "https://tally.so",
+        "description": "The simplest way to create forms."
       }
     ]
   },
@@ -48,14 +88,14 @@
     "type": "Productivity",
     "items": [
       {
-        "name": "CleanShot X",
-        "href": "https://cleanshot.com/",
-        "description": "Screen capture, enhanced."
+        "name": "Google Meet",
+        "href": "https://meet.google.com/",
+        "description": "Video conferencing and communication tool."
       },
       {
-        "name": "DaisyDisk",
-        "href": "https://daisydiskapp.com/",
-        "description": "Visually analyze your MacOS disk usage."
+        "name": "Loom",
+        "href": "https://loom.com/",
+        "description": "Beautiful, collaborative screen recordings"
       },
       {
         "name": "Linear",
@@ -78,115 +118,54 @@
         "description": "The platform for teamwork."
       },
       {
-        "name": "Spark",
-        "href": "https://sparkmailapp.com/",
-        "description": "Unified, native and powerful email client."
-      },
-      {
-        "name": "Zoom",
-        "href": "https://zoom.us/",
-        "description": "Video conferencing, simplified."
-      },
-      {
-        "name": "Screen Studio",
-        "href": "https://screenstudio.lemonsqueezy.com/?aff=VMdMv",
-        "description": "Beautiful screen recordings in minutes."
-      },
-      {
-        "name": "Hotlist",
-        "href": "https://pqina.nl/hotlist",
-        "description": "A simple todo list in your MacOS menubar."
+        "name": "Arcade",
+        "href": "https://arcade.software",
+        "description": "Effortless, beautiful interactive demos."
       }
     ]
   },
   {
-    "type": "Design",
+    "type": "Analytics",
     "items": [
       {
-        "name": "Dovetail",
+        "name": "Google Analytics",
         "href": "https://dovetailapp.com/",
-        "description": "Where customer knowledge lives."
+        "description": "Effective web analytics."
       },
       {
-        "name": "Figma",
-        "href": "https://www.figma.com/",
-        "description": "Collaborative interface design tool."
+        "name": "Mixpanel",
+        "href": "https://www.mixpanel.com/",
+        "description": "Product analytics for mobile and web."
       },
       {
-        "name": "ImageOptim",
-        "href": "https://imageoptim.com/mac",
-        "description": "Losslessly optimize images for the web."
-      },
-      {
-        "name": "Unsplash",
-        "href": "https://unsplash.com/",
-        "description": "Free, high-quality photos."
-      },
-      {
-        "name": "Untitled UI",
-        "href": "https://untitledui.lemonsqueezy.com/?aff=VMdMv",
-        "description": "The ultimate UI kit and design system for Figma."
+        "name": "June",
+        "href": "https://june.so",
+        "description": "Product analytics for your business."
       }
     ]
   },
   {
-    "type": "Finance",
+    "type": "Mailing",
     "items": [
       {
-        "name": "Stake",
-        "href": "https://hellostake.com/",
-        "description": "Trade U.S. stocks from Australia."
+        "name": "Mailchimp",
+        "href": "https://mailchimp.com/",
+        "description": "Marketing, automation and email platform."
       },
       {
-        "name": "Wise",
-        "href": "https://wise.com/invite/dic/haydenb95",
-        "description": "Global bank accounts with lower FX fees."
+        "name": "Resend",
+        "href": "https://resend.com",
+        "description": "Email for developers"
       },
       {
-        "name": "Robinhood",
-        "href": "https://join.robinhood.com/haydenb-e0f142",
-        "description": "Commission-free stock trading."
-      }
-    ]
-  },
-  {
-    "type": "Social",
-    "items": [
-      {
-        "name": "Beeper",
-        "href": "https://www.beeper.com/",
-        "description": "All of your messages in one inbox."
+        "name": "Beehiiv",
+        "href": "https://beehiiv.com",
+        "description": "Newsletter platform fpr growth."
       },
       {
-        "name": "Typefully",
-        "href": "https://typefully.com/write",
-        "description": "Professional tools for Twitter."
-      },
-      {
-        "name": "Poet.so",
-        "href": "https://poet.so/",
-        "description": "Make pretty Twitter screenshots."
-      },
-      {
-        "name": "Ray.so",
-        "href": "https://ray.so/",
-        "description": "Make pretty code snippet screenshots."
-      }
-    ]
-  },
-  {
-    "type": "Other",
-    "items": [
-      {
-        "name": "Spotify",
-        "href": "https://open.spotify.com/",
-        "description": "Enjoy and curate the world's music."
-      },
-
-      {
-        "name": "Klack",
-        "href": "https://tryklack.com/",
-        "description": "Satisfying mechanical keyboard sounds for MacOS."
+        "name": "AWS SES",
+        "href": "https://aws.amazon.com/ses/",
+        "description": "Transactional and marketing email APIs"
       }
     ]
   }

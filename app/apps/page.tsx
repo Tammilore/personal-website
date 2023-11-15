@@ -4,8 +4,8 @@ import { createMetadata } from '@/lib/metadata';
 import apps from '@/data/apps.json';
 import type { FC } from 'react';
 
-const title = 'Apps';
-const description = 'Web and mobile apps, demos and experiments.';
+const title = 'Products';
+const description = 'Web and mobile applications, demos and experiments.';
 
 export const metadata = createMetadata({ title, description, path: '/apps' });
 

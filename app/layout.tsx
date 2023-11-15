@@ -18,52 +18,41 @@ type RootLayoutProps = {
 const profileJsonLd = toJsonLd<Person>({
   '@context': 'https://schema.org',
   '@type': 'Person',
-  name: 'Hayden Bleasel',
-  brand: ['Jellypepper', 'Corellium'],
-  jobTitle: 'Chief Product Officer',
+  name: 'Tamilore Lawal',
+  brand: ['Zing'],
+  jobTitle: 'Product Manager',
   url: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? '/').href,
   sameAs: [
-    'https://twitter.com/haydenbleasel',
-    'https://dribbble.com/haydenbleasel',
-    'https://www.instagram.com/hayden.bleasel/',
-    'https://github.com/haydenbleasel/',
-    'https://www.linkedin.com/in/haydenbleasel',
-    'https://www.producthunt.com/@haydenbleasel',
-    'https://open.spotify.com/user/haydenbleasel',
-    'https://www.figma.com/@haydenbleasel',
-    'https://haydenbleasel.medium.com/',
+    'https://twitter.com/blacqee_',
+    'https://github.com/Tammilore/',
+    'https://www.linkedin.com/in/oluwatamiore-lawal',
   ],
   image: new URL(
     '/images/profile-large.jpg',
     process.env.NEXT_PUBLIC_SITE_URL ?? '/'
   ).href,
-  alumniOf: 'University of Technology, Sydney',
+  alumniOf: 'University of Lagos',
   birthPlace: {
     '@type': 'Place',
-    name: 'Sydney, Australia',
+    name: 'Lagos, Nigeria',
   },
-  familyName: 'Bleasel',
-  description:
-    'Australian product designer and TypeScript developer living in the U.S.',
-  gender: 'Male',
-  givenName: 'Hayden',
+  familyName: 'Lawal',
+  description: 'Product Manager and Developer',
+  gender: 'Female',
+  givenName: 'Tamilore',
   worksFor: {
     '@type': 'Organization',
-    name: 'Corellium',
+    name: 'Zing',
   },
   workLocation: {
     '@type': 'Place',
-    name: 'Delray Beach, Florida',
+    name: 'Lagos, Nigeria',
   },
   knowsLanguage: 'English',
-  knowsAbout: [
-    'Product Design',
-    'TypeScript Development',
-    'Product Management',
-  ],
+  knowsAbout: ['No-code Development', 'MERN', 'Product Management'],
   nationality: {
     '@type': 'Country',
-    name: 'Australia',
+    name: 'Nigeria',
   },
 });
 

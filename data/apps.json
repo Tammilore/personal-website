@@ -1,112 +1,68 @@
 [
   {
-    "name": "Refraction",
-    "description": "Generate unit tests and refactor code using AI.",
-    "link": "https://www.refraction.dev/",
+    "name": "Zing",
+    "description": "Open finance APIs for African businesses.",
+    "link": "https://www.zingfi.co/",
     "featured": true,
-    "image": "/apps/refraction.png",
-    "caption": {
-      "text": "acquired",
-      "link": "/apps/refraction"
-    }
+    "image": "/apps/zing.svg"
   },
   {
-    "name": "Superlight",
-    "description": "A lightweight platform for running syncs.",
-    "link": "https://www.superlight.app/",
-    "image": "/apps/superlight.svg",
+    "name": "Bloo",
+    "description": "An inbound email routing and automation tool.",
+    "link": "https://www.trybloo.co/",
+    "image": "/apps/bloo-2.png",
     "featured": true
   },
   {
-    "name": "San Andreas Radio",
-    "description": "All you had to do was follow the damn train, CJ!",
-    "link": "https://radio.haydenbleasel.com",
-    "image": "/apps/san-andreas-radio.png"
+    "name": "Boro",
+    "description": "Instant crypto-backed loans.",
+    "link": "/apps/boro",
+    "image": "/apps/boro.png",
+    "caption": {
+      "text": "doa",
+      "link": "/apps/boro"
+    }
   },
   {
-    "name": "texts.run",
-    "description": "Create a simple, messenger-style personal webpage.",
-    "link": "https://www.texts.run/",
+    "name": "Ava",
+    "description": "ChatGPT in your WhatsApp Messenger.",
+    "link": "/blog/upgrade-your-whatsapp-with-speech-to-text",
     "image": "/apps/texts.svg",
     "featured": true
   },
   {
-    "name": "Waitlist",
-    "description": "Fast, unbranded waitlists for developers.",
+    "name": "Tags",
+    "description": "All your financial accounts linked to your Twitter handle.",
     "link": "https://www.waitlist.email/",
-    "image": "/apps/waitlist.svg",
-    "featured": true
+    "image": "/apps/waitlist.svg"
   },
   {
-    "name": "Alchemy",
-    "description": "A visual journey of The Alchemist, powered by Midjourney.",
-    "link": "https://alchemy.haydenbleasel.com/",
+    "name": "Rentview",
+    "description": "Rental reviews from real renters",
+    "link": "https://rentview.softr.app/",
     "image": "/apps/alchemy.png"
   },
   {
-    "name": "Neutral App",
-    "description": "Join the carbon neutral community.",
-    "link": "https://tryneutral.com/",
+    "name": "Bookmark Bot",
+    "description": "Export, categorize and organize your bookmarked tweets",
+    "link": "https://makerpad.zapier.com/posts/building-an-automated-twitter-bot-to-create-an-archive-of-information",
     "image": "/apps/neutral.svg"
   },
   {
-    "name": "Hancock",
-    "description": "Simple email signature generator.",
-    "link": "https://hancock.haydenbleasel.com/",
-    "image": "/apps/hancock.svg"
+    "name": "Viva",
+    "description": "No-code widget for CAC business registrations.",
+    "link": "/apps/viva",
+    "image": "/apps/viva.jpg"
   },
   {
-    "name": "Presumi",
-    "description": "How I started a data analytics startup and partnered with SEEK.",
+    "name": "Cluster Living",
+    "description": "All-in-one platform to find your perfect home and live your best life.",
     "link": "/apps/presumi",
-    "image": "/apps/presumi.svg",
+    "image": "/apps/cluster.png",
+    "featured": true,
     "caption": {
       "text": "closed",
-      "link": "/apps/presumi"
+      "link": "/apps/cluster"
     }
-  },
-  {
-    "name": "Bokeh",
-    "description": "Meet your new photography portfolio.",
-    "link": "https://www.bokeh.photo/",
-    "image": "/apps/bokeh.svg",
-    "caption": {
-      "text": "transferred"
-    }
-  },
-  {
-    "name": "Favicons",
-    "description": "Node.js Favicon Generator. My first project to reach 1K stars.",
-    "link": "https://www.npmjs.com/package/favicons",
-    "image": "/apps/favicons.svg",
-    "caption": {
-      "text": "transferred"
-    }
-  },
-  {
-    "name": "Phantom",
-    "description": "A blog theme for Ghost.",
-    "link": "https://github.com/nitinthewiz/ghost-phantom",
-    "image": "/apps/phantom.svg",
-    "caption": {
-      "text": "transferred"
-    }
-  },
-  {
-    "name": "Desync",
-    "description": "A place to share and find inspiration from AI-generated art!",
-    "link": "https://www.desync.art/",
-    "image": "/apps/desync.png",
-    "caption": {
-      "text": "transferred",
-      "link": "/apps/desync"
-    }
-  },
-  {
-    "name": "Vercel for VS Code",
-    "description": "A VS Code extension for Vercel deployment status.",
-    "image": "/apps/vercel.svg",
-    "link": "https://marketplace.visualstudio.com/items?itemName=HaydenBleasel.vercel-vscode",
-    "featured": true
   }
 ]
