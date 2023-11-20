@@ -27,26 +27,26 @@
     "name": "Ava",
     "description": "ChatGPT in your WhatsApp Messenger.",
     "link": "/blog/upgrade-your-whatsapp-with-speech-to-text",
-    "image": "/apps/texts.svg",
+    "image": "/apps/ava.svg",
     "featured": true
   },
   {
     "name": "Tags",
     "description": "All your financial accounts linked to your Twitter handle.",
-    "link": "https://www.waitlist.email/",
-    "image": "/apps/waitlist.svg"
+    "link": "",
+    "image": "/apps/tags.svg"
   },
   {
     "name": "Rentview",
     "description": "Rental reviews from real renters",
     "link": "https://rentview.softr.app/",
-    "image": "/apps/alchemy.png"
+    "image": "/apps/rentview.svg"
   },
   {
     "name": "Bookmark Bot",
     "description": "Export, categorize and organize your bookmarked tweets",
     "link": "https://makerpad.zapier.com/posts/building-an-automated-twitter-bot-to-create-an-archive-of-information",
-    "image": "/apps/neutral.svg"
+    "image": "/apps/bookmark.svg"
   },
   {
     "name": "Viva",
@@ -57,7 +57,7 @@
   {
     "name": "Cluster Living",
     "description": "All-in-one platform to find your perfect home and live your best life.",
-    "link": "/apps/presumi",
+    "link": "/apps/cluster",
     "image": "/apps/cluster.png",
     "featured": true,
     "caption": {

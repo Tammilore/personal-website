@@ -9,7 +9,7 @@ export const Apps: FC = () => (
     title="Products"
     footer={
       <>
-        <Link href="/apps">Click here</Link> to view older products.
+        <Link href="/apps">Click here</Link> to view other products.
       </>
     }
   >

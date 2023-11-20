@@ -1,23 +1,23 @@
 [
   {
     "name": "Identitypass",
-    "description": "Strict, opinionated ESLint config for modern TypeScript apps.",
-    "link": "https://github.com/haydenbleasel/eslint-config-harmony",
-    "image": "/projects/harmony.svg",
+    "description": "Automate actions from identitypass through Integromat",
+    "link": "",
+    "image": "/projects/idpass.jpg",
     "featured": true
   },
   {
     "name": "Paystack",
-    "description": "Robust and comprehensive boilerplate for modern Next.js web apps.",
-    "link": "https://github.com/haydenbleasel/next-forge",
-    "image": "/projects/forge.svg",
+    "description": "Unofficial paystack plugin on Bubble",
+    "link": "",
+    "image": "/projects/paystack.png",
     "featured": true
   },
   {
     "name": "Fullgap",
-    "description": "Fast, unstyled link preview React component.",
-    "link": "https://github.com/haydenbleasel/react-glimpse",
-    "image": "/projects/glimpse.svg",
+    "description": "Integrate and use Fullgap with other applications through Zapier",
+    "link": "",
+    "image": "/projects/fullgap.svg",
     "featured": true
   }
 ]

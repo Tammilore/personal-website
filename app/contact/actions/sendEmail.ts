@@ -33,8 +33,8 @@ export const sendEmail = async ({
 
   try {
     await resend.emails.send({
-      from: 'noreply@beskar.co',
-      to: 'hello@haydenbleasel.com',
+      from: 'noreply@tamilore.co',
+      to: 'tammilore@gmail.com',
       subject: 'Contact form submission',
       reply_to: email,
       react,

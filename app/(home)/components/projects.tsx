@@ -6,7 +6,7 @@ import type { FC } from 'react';
 
 export const Projects: FC = () => (
   <Section
-    title="Apps & Plugins"
+    title="Extensions, plugins and more"
     // footer={
     //   <>
     //     <Link href="https://github.com/haydenbleasel">Request</Link> an

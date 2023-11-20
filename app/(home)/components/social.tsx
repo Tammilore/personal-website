@@ -4,34 +4,19 @@ import type { FC } from 'react';
 
 const socialLinks = [
   {
-    href: 'https://twitter.com/haydenbleasel',
+    href: 'https://twitter.com/blacqee_',
     name: 'X',
     image: '/social/x.svg',
   },
   {
-    href: 'https://github.com/haydenbleasel',
+    href: 'https://github.com/',
     name: 'GitHub',
     image: '/social/github.svg',
   },
   {
-    href: 'https://www.instagram.com/hayden.bleasel/',
-    name: 'Instagram',
-    image: '/social/instagram.svg',
-  },
-  {
-    href: 'https://www.producthunt.com/@haydenbleasel',
-    name: 'Product Hunt',
-    image: '/social/producthunt.svg',
-  },
-  {
-    href: 'https://www.linkedin.com/in/haydenbleasel/',
+    href: 'https://www.linkedin.com/in/oluwatamilore-lawal/',
     name: 'LinkedIn',
     image: '/social/linkedin.svg',
-  },
-  {
-    href: 'https://dribbble.com/haydenbleasel',
-    name: 'Dribbble',
-    image: '/social/dribbble.svg',
   },
 ];
 
