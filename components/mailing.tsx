@@ -48,7 +48,7 @@ export const MailingList: FC = () => {
       });
 
       const response = await fetch(
-        `https://${domain}/api/newsletter-form/${formId}`,
+        `https://${domain}/api/newsletter-form/${formId}`, // Change this to an airtable webhook url
         {
           method: 'POST',
           body: formBody.toString(),
