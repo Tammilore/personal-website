@@ -48,12 +48,12 @@ export const MailingList: FC = () => {
       });
 
       const response = await fetch(
-        `https://${domain}/api/newsletter-form/${formId}`, // Change this to an airtable webhook url
+        'https://hooks.airtable.com/workflows/v1/genericWebhook/appZoRX6JikN7HEIb/wflMnjWyUo9jwC69i/wtrSZO3ZE3GDJ65mS', // Change this to an airtable webhook url
         {
           method: 'POST',
           body: formBody.toString(),
           headers: {
-            'Content-Type': 'application/x-www-form-urlencoded',
+            'Content-Type': 'application/json',
           },
         }
       );
