@@ -18,6 +18,10 @@ export const Blog = defineDocumentType(() => ({
       type: 'string',
       required: true,
     },
+    preview: {
+      type: 'string',
+      required: false,
+    },
     date: {
       type: 'date',
       required: true,

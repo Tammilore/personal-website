@@ -17,13 +17,13 @@ export const Apps: FC = () => (
       .filter(({ featured }) => featured)
       .map((app) => (
         <div className="flex items-center gap-4" key={app.name}>
-          <Image
+          {/* <Image
             src={app.image}
             alt=""
             width={36}
             height={36}
             className="w-9 h-9 rounded-lg m-0 shadow-sm"
-          />
+          /> */}
           <div>
             <p className="m-0">
               <Link href={app.link}>{app.name}</Link>

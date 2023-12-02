@@ -6,7 +6,7 @@ import { Link } from '@/components/link';
 import type { FC } from 'react';
 
 const title = 'Blog';
-const description = 'Thoughts, ideas, and opinions.';
+const description = 'Learn how to build cool software products';
 
 export const metadata = createMetadata({ title, description, path: '/blog' });
 

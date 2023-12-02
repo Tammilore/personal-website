@@ -53,6 +53,9 @@ const DocPage: FC<DocPageProps> = ({ params }) => {
     images.push(imageUrl);
   }
 
+  const preview = doc.preview || '';
+  const rest = doc.body.code;
+
   return (
     <div className="flex flex-col gap-8">
       <div>

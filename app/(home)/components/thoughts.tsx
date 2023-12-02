@@ -9,7 +9,7 @@ export const Thoughts: FC = () => (
     title="Thinking Out Loud"
     footer={
       <>
-        <Link href="/thoughts">Read</Link> a couple more tidbits.
+        <Link href="/thoughts">Read</Link> my thoughts.
       </>
     }
   >
