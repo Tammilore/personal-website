@@ -6,13 +6,20 @@ class MyDocument extends Document {
       <Html>
         <Head>
           <script
-            defer
-            type="text/javascript"
-            src="https://datapulse.app/datapulse.min.js"
-            id="datapulse"
-            data-endpoint="https://datapulse.app/api/v1/event"
-            data-workspace="clppoexp51s56cl37xy8h9beg"
-          ></script>
+            dangerouslySetInnerHTML={{
+              __html: `
+                (function() {
+                  var script = document.createElement('script');
+                  script.src = 'https://datapulse.app/datapulse.min.js';
+                  script.defer = true;
+                  script.id = 'datapulse';
+                  script.dataset.endpoint = 'https://datapulse.app/api/v1/event';
+                  script.dataset.workspace = 'clppoexp51s56cl37xy8h9beg';
+                  document.head.appendChild(script);
+                })()
+              `,
+            }}
+          />
         </Head>
         <body>
           <Main />
