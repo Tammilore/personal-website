@@ -163,6 +163,11 @@
         "description": "Newsletter platform for growth."
       },
       {
+        "name": "Really Good Emails",
+        "href": "https://reallygoodemails.com/",
+        "description": "Endless email design and content inspiration."
+      },
+      {
         "name": "AWS SES",
         "href": "https://aws.amazon.com/ses/",
         "description": "Transactional and marketing email APIs"
