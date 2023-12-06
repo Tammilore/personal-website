@@ -8,10 +8,7 @@ import { Button } from '@/components/ui/button';
 import { useToast } from '@/components/ui/use-toast';
 import type { FC, FormEventHandler } from 'react';
 
-const domain = 'app.loops.so';
-const formId = 'clmnqcb4e024xma0or3stgrkd';
-
-export const MailingList: FC = () => {
+export const MailingListV2: FC = () => {
   const [email, setEmail] = useState('');
   const [disabled, setDisabled] = useState(false);
   const { toast } = useToast();
@@ -42,10 +39,6 @@ export const MailingList: FC = () => {
       if (!isValidEmail(email)) {
         throw new Error('Please enter a valid email');
       }
-
-      const formBody = new URLSearchParams({
-        email,
-      });
 
       const response = await fetch(
         'https://x8ki-letl-twmt.n7.xano.io/api:ShWkjypC/contacts',
@@ -109,7 +102,7 @@ export const MailingList: FC = () => {
         className="shrink-0"
         disabled={disabled || !email.trim() || !isValidEmail(email)}
       >
-        {disabled ? 'Please wait...' : 'Join the mailing list'}
+        {disabled ? 'Please wait...' : 'Please subscribe 🙈'}
       </Button>
     </form>
   );

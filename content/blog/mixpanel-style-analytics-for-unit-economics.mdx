@@ -1,0 +1,41 @@
+---
+title: Mixpanel-style Analytics For Customer Unit Economics
+description: Learn how to build your own analytics and tracking tool.
+date: 12-05-2023
+---
+
+import { Announcement } from '../../app/(home)/components/subscribe-v2.tsx';
+import { TwitterTweetEmbed } from 'react-twitter-embed';
+
+<Announcement />
+
+I didn’t write a lot of build articles this year so I’m attempting to finish off by writing one that’s a little complex. It could get pretty long so I’m going to be writing and releasing it in bits over the next two or three Mondays. I’m not very fond of frontend things so this is going to be a primarily API (first) build.
+
+### What we’re building
+
+A few weeks ago I came across a tweet I found pretty interesting. It was about building a Mixpanel-style analytics for customer unit economics (That’s a mouth full. Lol). I love tools like [Mixpanel](https://mixpanel.com/) and [June](https://www.june.so/) because they tell you a lot about your business and you can track even the smallest things but also because I think they take visualizing data to another level.
+
+In his tweet, Tom talks about an _“**event-driven data architecture**”_ they have at Monzo which allows them _“**assign cost or revenue to every action a customer might take.**”_ This basically means that they would look at each customers interaction and attribute figures to their actions so they could know how much a customer had made them or how much a customer had cost them.
+
+<TwitterTweetEmbed tweetId={'1724869506471018694'} />
+
+Let’s use Zee, an imaginary savings firm that handles its transactions through Paystack. Each time a customer deposits funds to a fixed-term savings scheme using Paystack, Zee incurs a fee of 1.4% of the deposited sum. At the same time, they earn an interest ranging from 1 to 3% on the saved amount. In another scenario, if Zee allocates $79 monthly for their customer support tool and logs 200,000 minutes of support in a month, the cost to Zee per minute of customer support time amounts to $0.000395. Following so far?
+
+It essentially just involves the standard method of computing costs, revenue, and ultimately profit and loss for a company. But in this case, the calculation is more granular, breaking it down to the level of each individual customer interaction.
+
+The tool we’ll use to track, measure and calculate each of these interactions is what we are building. Of course you could probably tweak an existing tool to get these results on some level but as usual I just want to show you the extent of what you can create from scratch yourself if you choose to.
+
+### Toolstack
+
+For this build, we’re going to use:
+
+- [Xano](https://xano.com/) - I think Xano is an absolutely wonderful tool. I find that it’s majorly used as an external database to other no-code tools but you can also use [Xano](https://xano.com/) to build your own API products.
+- [Graphy](https://graphy.app/) - Helps you visualize and share data beautifully.
+
+### How it works
+
+Our tool is going to work similarly to Mixpanel, capturing details of each interaction a customer has and then transmitting it to our API. The properties of these events that we capture are super important because they make the data pool that we’ll analyze and transform into simple visual representations.
+
+Next up, we’ll start our build from the first step - developing the ingestion API.
+
+> 📌 I'll be releasing the first update for the build next Monday. If you're subscribed to my newsletter, you'll receive the update before I share it publicly. Catch you next week!

@@ -1,17 +1,36 @@
 [
   {
+    "name": "Sono",
+    "description": "Customizable living spaces",
+    "link": "",
+    "featured": true,
+    "image": "",
+    "caption": {
+      "text": "Coming 2025",
+      "link": ""
+    }
+  },
+  {
     "name": "Zing",
     "description": "Open finance APIs for African businesses.",
     "link": "https://www.zingfi.co/",
     "featured": true,
-    "image": "/apps/zing.svg"
+    "image": "/apps/zing.svg",
+    "caption": {
+      "text": "active",
+      "link": "https://www.zingfi.co/"
+    }
   },
   {
     "name": "Bloo",
     "description": "An inbound email routing and automation tool.",
     "link": "https://www.trybloo.co/",
     "image": "/apps/bloo-2.png",
-    "featured": true
+    "featured": true,
+    "caption": {
+      "text": "experimental",
+      "link": "https://www.trybloo.co/"
+    }
   },
   {
     "name": "Boro",
@@ -28,31 +47,51 @@
     "description": "ChatGPT in your WhatsApp Messenger.",
     "link": "/blog/upgrade-your-whatsapp-with-speech-to-text",
     "image": "/apps/ava.svg",
-    "featured": true
+    "featured": true,
+    "caption": {
+      "text": "on-hold",
+      "link": "/blog/upgrade-your-whatsapp-with-speech-to-text"
+    }
   },
   {
     "name": "Tags",
     "description": "All your financial accounts linked to your Twitter handle.",
     "link": "",
-    "image": "/apps/tags.svg"
+    "image": "/apps/tags.svg",
+    "caption": {
+      "text": "discontinued",
+      "link": ""
+    }
   },
   {
     "name": "Rentview",
     "description": "Rental reviews from real renters",
     "link": "https://rentview.softr.app/",
-    "image": "/apps/rentview.svg"
+    "image": "/apps/rentview.svg",
+    "caption": {
+      "text": "discontinued",
+      "link": "https://rentview.softr.app/"
+    }
   },
   {
     "name": "Bookmark Bot",
     "description": "Export, categorize and organize your bookmarked tweets",
     "link": "https://makerpad.zapier.com/posts/building-an-automated-twitter-bot-to-create-an-archive-of-information",
-    "image": "/apps/bookmark.svg"
+    "image": "/apps/bookmark.svg",
+    "caption": {
+      "text": "discontinued",
+      "link": "https://makerpad.zapier.com/posts/building-an-automated-twitter-bot-to-create-an-archive-of-information"
+    }
   },
   {
     "name": "Viva",
     "description": "No-code widget for CAC business registrations.",
     "link": "/apps/viva",
-    "image": "/apps/viva.jpg"
+    "image": "/apps/viva.jpg",
+    "caption": {
+      "text": "discontinued",
+      "link": "/apps/viva"
+    }
   },
   {
     "name": "Cluster Living",
@@ -61,7 +100,7 @@
     "image": "/apps/cluster.png",
     "featured": true,
     "caption": {
-      "text": "closed",
+      "text": "discontinued",
       "link": "/apps/cluster"
     }
   }
