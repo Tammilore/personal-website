@@ -142,28 +142,28 @@ Now let’s create the tables. We’ll identify the properties we need for each 
 
 | Field Name/Property | Field Type | Description | Required? |
 | --- | --- | --- | --- |
-| name | Text | Metric name e.g support-minutes | Yes |
-| unique_id | Text | A unique id. Preferably UUID | Yes |
-| description | Text | The action or metric description | No |
-| type | Enum (Cost, Revenue) | Whether cost or revenue | Yes |
-| total_number_of_events | Integer | Total events logged for this metric | Yes |
+| `name` | Text | Metric name e.g support-minutes | Yes |
+| `unique_id` | Text | A unique id. Preferably UUID | Yes |
+| `description` | Text | The action or metric description | No |
+| `type` | Enum (Cost, Revenue) | Whether cost or revenue | Yes |
+| `total_number_of_events` | Integer | Total events logged for this metric | Yes |
 
 **Events Table**
 
 | Field Name/Property | Field Type | Description | Required? |
 | --- | --- | --- | --- |
-| metric | Text | The metric being tracked | Yes |
-| unique_id | Text | A unique id. Preferably UUID | Yes |
-| value | Integer | The value of the metric tracked | Yes |
-| customer | Table Reference | The customer who took the action | Yes |
+| `metric` | Text | The metric being tracked | Yes |
+| `unique_id` | Text | A unique id. Preferably UUID | Yes |
+| `value` | Integer | The value of the metric tracked | Yes |
+| `customer` | Table Reference | The customer who took the action | Yes |
 
 **Customers Table**
 
 | Field Name/Property | Field Type | Description | Required? |
 | --- | --- | --- | --- |
-| name | Text | Name of customer | Yes |
-| unique_id | Text | A unique id. Preferably UUID | Yes |
-| additional_properties | JSON | Additional info about the customer | No |
+| `name` | Text | Name of customer | Yes |
+| `unique_id` | Text | A unique id. Preferably UUID | Yes |
+| `additional_properties` | JSON | Additional info about the customer | No |
 
 Next, we’ll build out the functions for the API.
 
