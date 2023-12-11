@@ -36,6 +36,137 @@ For this build, we’re going to use:
 
 Our tool is going to work similarly to Mixpanel, capturing details of each interaction a customer has and then transmitting it to our API. The properties of these events that we capture are super important because they make the data pool that we’ll analyze and transform into simple visual representations.
 
+### Checklist
+
+- [ ] Build the Ingestion API
+  - [x] Structure the database
+  - [ ] Build out the endpoints
+
 Next up, we’ll start our build from the first step - developing the ingestion API.
 
-> 📌 I'll be releasing the first update for the build next Monday. If you're subscribed to my newsletter, you'll receive the update before I share it publicly. Catch you next week!
+> 👋🏽 Hi there. First update starts here.
+
+## Build the Ingestion API
+
+There are two parts to building the Ingestion API, structuring our database and then developing the actual endpoints for the API. For this update we’ll be focusing on structuring our database. I’m also going to try as much as possible to show you around this side of Xano.
+
+### Intro to Xano Databases
+
+Xano’s database works pretty much like any simple database you have come across. You can create multiple tables and in each table you can create columns for any number of field types and then you can add records on each row.
+
+![MXB1.png](/blog/mixpanel-build/MXB1.png)
+
+You can navigate to the Database page from the left side bar on Xano. The Dashboard page also helps give you an idea of how many tables you have in your database and how many records each table has. With the free plan, you get 100k records across your entire database.
+
+![MXB2.png](/blog/mixpanel-build/MXB2.png)
+
+Let’s create a simple table.
+
+At the top right side, click on the **_Add Table_** button.
+
+![MXB3.png](/blog/mixpanel-build/MXB3.png)
+
+There are two ways to add a table to Xano. You can either import a csv or you can add the table manually. We’re working with the manual method. Give your table a name - in this case, **Subscribers**. Add a description and tag if you like and then click on the **_Add Table_** button on the lower right side.
+
+![MXB4.png](/blog/mixpanel-build/MXB4.png)
+
+When you create a table, Xano automatically adds an **_id_** and **_created_at_** field. The id field assigns a number value to each record, you can always add your own unique id field if you prefer. The created_at field helps you now the exact time a record was created.
+
+For our Subscribers table, we are going to add a Name and Email field. To add a new field, click on the plus icon.
+
+![MXB5.png](/blog/mixpanel-build/MXB5.png)
+
+There are many field types supported by Xano. You can read all about them here. In our case, we just need the Text and Email field type.
+
+![MXB6.png](/blog/mixpanel-build/MXB6.png)
+
+Select Text field type, give it a name then choose between yes or no for the required option and save. Do the same for the Email field type as well.
+
+![MXB7.png](/blog/mixpanel-build/MXB7.png)
+
+This is how our table looks like once the fields are added. You can click on the **_Add new record_** button to add a new subscriber or you can add one via an API. We’ll get to that when we’re building out endpoints.
+
+![MX8.png](/blog/mixpanel-build/MX8.png) _This is how the Database page looks when you have a table._
+
+### Structuring our database
+
+Now that you have some idea on how to create tables in Xano, we can start to structure our databases.
+
+Let’s think about how our tool works again to try to determine how . For every particular **action** a **customer** takes, we want to send an **event.** If you guessed that we need 3 tables, you guessed right.
+
+**Actions**
+
+Actions are what we are assigning numerical value to so we know how much a customer cost or made us when they take it. It is from these actions that we derive the metrics that we will be tracking. You can have as many actions as possible and you can have multiple metrics from one action. Here are some examples to help you understand:
+
+| Action                                       | Metrics         | Type    |
+| -------------------------------------------- | --------------- | ------- |
+| When a customer speaks to a support rep      | support-minutes | Cost    |
+| When a customer makes a fixed plan deposit   | processing-fees | Cost    |
+| When a customer makes a fixed plan deposit   | interest-earned | Revenue |
+| When a customer successfully refers a friend | referrer-reward | Cost    |
+| When a customer successfully refers a friend | referee-spend   | Revenue |
+
+Let’s go through the examples briefly using our imaginary savings startup Zee. When a customer speaks to a support representative, Zee tracks the support minutes to know how much each customer costs them in terms of support.
+
+When a customer makes a deposit to a fixed savings plan, Zee tracks how much in processing fees that deposit has cost them, they also track how much in interest they will be getting from that locked deposit.
+
+And finally, when a customer successfully refers a friend to Zee, that customer costs Zee a certain amount that they will pay as a reward for the referral but Zee will also track how much they will make from the amount the referred friend spends.
+
+This is our first database table.
+
+**Events**
+
+To continuously log these actions as they happen, they’ll be sent as **Events**. Every time a customer takes that action, we’ll pass them to the API along with the value of what that action costs or makes. Here’s another example to help you understand:
+
+| Action | Metrics | Type | Value |
+| --- | --- | --- | --- |
+| When a customer speaks to a support rep | support-minutes | Cost | $0.000395 x Minutes spent by customer |
+| When a customer makes a fixed plan deposit | processing-fees | Cost | 1.4% of the amount deposited |
+| When a customer makes a fixed plan deposit | interest-earned | Revenue | 2% of the amount deposited |
+| When a customer successfully refers a friend | referrer-reward | Cost | N500 |
+| When a customer successfully refers a friend | referee-spend | Revenue | 2% of the amount deposited |
+
+The cost of speaking to the support rep is the total number of minutes spent multiplied by the single cost of a minute like we calculated above. So if the customer spent 20 minutes, the value that will be passed in this event will be $0.0079.
+
+If the customer made a deposit of N300,000 into their fixed savings account, this would have cost Zee N4200 but it would have also made them N6000. If you do the math further you can tell whether they made a profit or loss based on this single action by their customer.
+
+If the customer makes a successful referral to their friend, Zee would have to spend N500 as a reward to the customer for bringing in a friend but if the customer’s friend deposited N500,000, this means that Zee also earned N10,000.
+
+This is our second table.
+
+**Customer**
+
+The Customer table is the third and last database table that we need. It tells us who took an action, when and how many times the event happened.
+
+Now let’s create the tables. We’ll identify the properties we need for each column and their field type. Remember there’s a default id and created_at field with each table.
+
+**Metrics Table (Actions)**
+
+| Field Name/Property | Field Type | Description | Required? |
+| --- | --- | --- | --- |
+| name | Text | Metric name e.g support-minutes | Yes |
+| unique_id | Text | A unique id. Preferably UUID | Yes |
+| description | Text | The action or metric description | No |
+| type | Enum (Cost, Revenue) | Whether cost or revenue | Yes |
+| total_number_of_events | Integer | Total events logged or this metric | Yes |
+
+**Events Table**
+
+| Field Name/Property | Field Type | Description | Required? |
+| --- | --- | --- | --- |
+| metric | Text | The metric being tracked | Yes |
+| unique_id | Text | A unique id. Preferably UUID | Yes |
+| value | Integer | The value of the metric tracked | Yes |
+| customer | Table Reference | The customer who took the action | Yes |
+
+**Customers Table**
+
+| Field Name/Property | Field Type | Description | Required? |
+| --- | --- | --- | --- |
+| name | Text | Name of customer | Yes |
+| unique_id | Text | A unique id. Preferably UUID | Yes |
+| additional_properties | JSON | Additional info about the customer | No |
+
+Next, we’ll build out the functions for the API.
+
+> 📌 I'll be releasing the second update for the build next Monday. If you're subscribed to my newsletter, you'll receive the update before I share it publicly. Catch you next week!
