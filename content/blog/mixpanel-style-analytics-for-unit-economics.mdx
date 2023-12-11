@@ -68,13 +68,13 @@ There are two ways to add a table to Xano. You can either import a csv or you ca
 
 ![MXB4.png](/blog/mixpanel-build/MXB4.png)
 
-When you create a table, Xano automatically adds an **_id_** and **_created_at_** field. The id field assigns a number value to each record, you can always add your own unique id field if you prefer. The created_at field helps you now the exact time a record was created.
+When you create a table, Xano automatically adds an **_id_** and **_created_at_** field. The id field assigns a number value to each record, you can always add your own unique id field if you prefer. The created_at field helps you know the exact time a record was created.
 
 For our Subscribers table, we are going to add a Name and Email field. To add a new field, click on the plus icon.
 
 ![MXB5.png](/blog/mixpanel-build/MXB5.png)
 
-There are many field types supported by Xano. You can read all about them here. In our case, we just need the Text and Email field type.
+There are many field types supported by Xano. You can read all about them [here](https://docs.xano.com/database/field-types). In our case, we just need the Text and Email field type.
 
 ![MXB6.png](/blog/mixpanel-build/MXB6.png)
 
@@ -146,7 +146,7 @@ Now let’s create the tables. We’ll identify the properties we need for each 
 | unique_id | Text | A unique id. Preferably UUID | Yes |
 | description | Text | The action or metric description | No |
 | type | Enum (Cost, Revenue) | Whether cost or revenue | Yes |
-| total_number_of_events | Integer | Total events logged or this metric | Yes |
+| total_number_of_events | Integer | Total events logged for this metric | Yes |
 
 **Events Table**
 
