@@ -16,7 +16,7 @@ import type { Metadata } from 'next';
 import type { ReactElement } from 'react';
 
 const title = 'Product Manager and No-code Developer';
-const description = 'Founder, Zing. Previously at Bloc and Helicarrier';
+const description = 'Product Manager and No-code Developer';
 
 export const metadata: Metadata = createMetadata({
   title,
@@ -40,7 +40,7 @@ const Home = async (): Promise<ReactElement> => {
     <>
       <Banner />
       <Hero />
-      {announcement ? <Announcement {...announcement} /> : null}
+      {/* {announcement ? <Announcement {...announcement} /> : null} */}
       {/* <Intro /> */}
       <Work />
       <Apps />
