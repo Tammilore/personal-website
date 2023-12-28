@@ -46,7 +46,7 @@ const Home = async (): Promise<ReactElement> => {
       <Apps />
       {/* <Projects /> */}
       <Blog />
-      <Thoughts />
+      {/* <Thoughts /> */}
       {/* {announcement2 ? <Announcement {...announcement} /> : null} */}
       {/* <Clients /> */}
       <Social />
