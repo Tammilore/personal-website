@@ -433,8 +433,121 @@ Don’t forget to run and debug the endpoint to be sure it works well.
 
 We are building this as a tool for internal use so you can probably decide whether you would like to authenticate it or not. You can achieve the major results either way but it would be best for security reasons.
 
-Steps for authenticating the API with API keys are available to subscribers of my newsletter. Additional build steps are always sent before the next update on the blog.
+Steps for authenticating the API with API keys are available to subscribers of my newsletter.
 
 Next up, we’ll build out the analytics part of the tool. This is how we’ll be able to retrieve insights from our data and feed it to our graph.
 
 > 📌 I'll be releasing the third update for the build next Monday. If you're subscribed to my newsletter, you'll receive the update before I share it publicly. Catch you next week!
+
+### Build out the analytics API
+
+We’re finally at the last step of our build. This has been pretty long so if you got this far, yayy you! For this last step, I’m going to try as much as possible to explain as best as I can so this build isn’t even longer.
+
+Let’s think about how this should work.
+
+We want to analyze our data, get insights and present them in such a way that we can feed it into our graphs. For our build, we’ll focus on simple bar and line charts. Remember that we have 3 tables holding our data but the data we want to analyze and get insights from is the Events table. This is where we log every action that happens for every metric, who took that action and the value we have assigned to that action, whether cost or revenue. Here’s an example of our Events table:
+
+| #id | created_at | metric | unique_id | value | customer_id |
+| --- | --- | --- | --- | --- | --- |
+| 1 | December 19, 2023 | support_minutes | fft567 | 20 | tami@gmail #2 |
+| 2 | December 31, 2023 | processing_fees | ty678 | 300 | tami@gmail #2 |
+| 3 | December 31, 2023 | support_minutes | 765rft | 12 | tami@gmail #2 |
+| 4 | December 31, 2023 | support_minutes | yy65aq | 45 | jo@gmail #3 |
+| 5 | January 1, 2024 | support_minutes | 89io0r | 6 | jo@gmail #3 |
+
+Just looking at the table, an example of information you want to deduce is how much each individual customer cost you for the `support_minutes` metric. To get this, we’ll need to group all the `support_minutes` metric events by each customer and then calculate the total sum of values for each customer.
+
+First, take out all events that are not for the `support_minutes` metric as well as the columns we don’t really need.
+
+| created_at        | metric          | value | customer_id   |
+| ----------------- | --------------- | ----- | ------------- |
+| December 19, 2023 | support_minutes | 20    | tami@gmail #2 |
+| December 31, 2023 | support_minutes | 12    | tami@gmail #2 |
+| December 31, 2023 | support_minutes | 45    | jo@gmail #3   |
+| January 1, 2024   | support_minutes | 6     | jo@gmail #3   |
+
+Now let’s rearrange the table to properly show the sum of `support_minutes` for each customer.
+
+| tami@gmail #2 | jo@gmail #3 |
+| ------------- | ----------- |
+| 20            | 45          |
+| 12            | 6           |
+| 32            | 51          |
+
+So between December 19th, 2023 and January 1st, 2024, customers used a total of **83** support minutes. Tami used a total of **32** support minutes and Jo used a total of **51** support minutes.
+
+> 🔔 Remember that for metrics like `support_minutes`, the values are not the actual cost. [Here’s the explanation](https://www.notion.so/Mixpanel-style-analytics-for-customer-unit-economics-Private-e89ec78d2a174ae89487d237824447ea?pvs=21). The calculations for the cost are in the analytics API.
+
+Here’s how a bar chart for this would look:
+
+![Screenshot 2024-01-01 113759.png](/blog/mixpanel-build/Screenshot 2024-01-01 113759.png)
+
+You can use this logic to build out the API.
+
+I’ve built a public endpoint you can use to generate a bar or line chart with two different viewing options. You can group and view the data by each individual customer or you can view by each month for a particular customer. It doesn’t have to stop there, you can tweak the API so it supports more chart types like pie chart, combo bar charts and funnels. You can also modify it so you can group by whatever values you choose. Let’s take a look at the endpoint.
+
+**Inputs**
+
+- `start_date` : This is the date you want to start querying events from. It should be written plainly like this 2023-12-18. It is a required field.
+- `end_date` : This is the date you want to stop at. It should be written in the same way as the start date and is also a required field.
+- `metric_one` : This is the metric that you want to analyze. Ensure that you are writing it exactly as it was when created. This is a required field.
+- `customer_email`: This is the email of the customer or any other unique value that you chose when creating the customer table. The field is only needed if you want the API to generate a chart grouped by months for an individual customer.
+- `title` : The title or heading for your chart or graph. This is a required field.
+- `type` : The type of chart you want the API to create. The options here are `bar` and `line`.
+- `additional_operation`: This is an object field that helps us calculate the actual costs for metrics like our support metrics example where we calculate the minutes the user spends and not the actual cost of the minute.
+
+```json
+"additional_operation": {
+    "value": 0
+  }
+```
+
+Here is how the additional operation works:
+
+Let’s again use the `support_minutes` metric example where Zee spends $79 each month on its support tool. In this case, the additional operation field will calculate the total sum of the minutes that all customers have spent within the time specified. It will then divide that by the value of the tool to get the cost of each minute and then multiply that by the total sum of minutes that each individual customer has spent. $79 here is the value of the additional operation.
+
+For metrics that do not require an additional calculation, ensure that the value is always left as 0.
+
+**Group by Customer**
+
+Let’s generate a chart to see the cost of support minutes by every customer. Here’s the request:
+
+```json
+GET https://x8ki-letl-twmt.n7.xano.io/api:U3zovbJP/analyze
+
+{
+  "start_date": "2023-12-18",
+  "end_date": "2024-01-01",
+  "metric_one": "support_minutes",
+  "customer_email": "", // This isn't needed for grouping by customers
+  "additional_operation": {
+    "value": 79
+  },
+  "title": "Cost of Support",
+  "type": "bar"
+}
+```
+
+https://visualize.graphy.app/view/90888455-133e-4802-a0db-9c7d467492e2
+
+**Group by Month**
+
+Now let’s do another chart to see the cost of support minutes by an individual customer grouped by month.
+
+```json
+GET https://x8ki-letl-twmt.n7.xano.io/api:U3zovbJP/analyze
+
+{
+  "start_date": "2023-12-18",
+  "end_date": "2024-01-01",
+  "metric_one": "support_minutes",
+  "customer_email": "joe@gmail.com",
+  "additional_operation": {
+    "value": 79
+  },
+  "title": "Cost of Support",
+  "type": "line"
+}
+```
+
+https://graphy.app/view/c1cc5d13-8a74-4171-81dd-b3ca2033c1f9
