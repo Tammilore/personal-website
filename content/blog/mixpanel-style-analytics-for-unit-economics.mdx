@@ -7,7 +7,7 @@ date: 12-05-2023
 import { Announcement } from '../../app/(home)/components/subscribe-v2.tsx';
 import { TwitterTweetEmbed } from 'react-twitter-embed';
 
-> 👋🏽 Hi there. Latest update starts [here](#build-out-the-endpoints).
+> 👋🏽 Hi there. Latest update starts [here](#build-out-the-analytics-api).
 
 I didn’t write a lot of build articles this year so I’m attempting to finish off by writing one that’s a little complex. It could get pretty long so I’m going to be writing and releasing it in bits over the next two or three Mondays. I’m not very fond of frontend things so this is going to be a primarily API (first) build.
 
@@ -42,7 +42,7 @@ Our tool is going to work similarly to Mixpanel, capturing details of each inter
   - [x] Structure the database
   - [x] Build out the endpoints
   - [x] Authenticating the API
-- [ ] Build out the Analytics
+- [x] Build out the Analytics
 
 Next up, we’ll start our build from the first step - developing the ingestion API.
 
@@ -307,7 +307,11 @@ The `value` field should generally hold the calculated amount attributed to that
 
 There would be two events logged in this case and the `value` field would hold 4200 for the _processing_fee_ metric and 6000 for the _interest_earned_ metric.
 
+<div id="some-notes-on-the-value-input">
+
 However, in cases where the action being assigned value is something like the minutes a customer spends talking to support staff, the actual amount of the cost for each event can only be determined by dividing the cost of the tool by the total number of minutes that have been spent by customers over a particular period of time and this is constantly changing.
+
+</div>
 
 We’ll look into how to handle the dynamic calculations when we are building the Analytics API but here you should just enter the actual number of minutes as the value.
 
@@ -437,8 +441,6 @@ Steps for authenticating the API with API keys are available to subscribers of m
 
 Next up, we’ll build out the analytics part of the tool. This is how we’ll be able to retrieve insights from our data and feed it to our graph.
 
-> 📌 I'll be releasing the third update for the build next Monday. If you're subscribed to my newsletter, you'll receive the update before I share it publicly. Catch you next week!
-
 ### Build out the analytics API
 
 We’re finally at the last step of our build. This has been pretty long so if you got this far, yayy you! For this last step, I’m going to try as much as possible to explain as best as I can so this build isn’t even longer.
@@ -476,11 +478,11 @@ Now let’s rearrange the table to properly show the sum of `support_minutes` fo
 
 So between December 19th, 2023 and January 1st, 2024, customers used a total of **83** support minutes. Tami used a total of **32** support minutes and Jo used a total of **51** support minutes.
 
-> 🔔 Remember that for metrics like `support_minutes`, the values are not the actual cost. [Here’s the explanation](https://www.notion.so/Mixpanel-style-analytics-for-customer-unit-economics-Private-e89ec78d2a174ae89487d237824447ea?pvs=21). The calculations for the cost are in the analytics API.
+> 🔔 Remember that for metrics like `support_minutes`, the values are not the actual cost. [Here’s the explanation](#some-notes-on-the-value-input). The calculations for the cost are in the analytics API.
 
 Here’s how a bar chart for this would look:
 
-![Screenshot 2024-01-01 113759.png](/blog/mixpanel-build/Screenshot 2024-01-01 113759.png)
+![Barchart-sketch.png](/blog/mixpanel-build/Barchart-sketch.png)
 
 You can use this logic to build out the API.
 
@@ -528,7 +530,7 @@ GET https://x8ki-letl-twmt.n7.xano.io/api:U3zovbJP/analyze
 }
 ```
 
-https://visualize.graphy.app/view/90888455-133e-4802-a0db-9c7d467492e2
+[![Barchart.png](/blog/mixpanel-build/Barchart.png)](https://graphy.app/view/90888455-133e-4802-a0db-9c7d467492e2) Click on the image to view the live graph
 
 **Group by Month**
 
@@ -550,4 +552,25 @@ GET https://x8ki-letl-twmt.n7.xano.io/api:U3zovbJP/analyze
 }
 ```
 
-https://graphy.app/view/c1cc5d13-8a74-4171-81dd-b3ca2033c1f9
+[![Linechart.png](/blog/mixpanel-build/Linechart.png)](https://graphy.app/view/c1cc5d13-8a74-4171-81dd-b3ca2033c1f9) Click on the image to view the live graph
+
+### Testing, extras and notes
+
+We’ve managed to cover all the basics that we’d need to build this tool.
+
+- Creating customers and metrics
+- Logging and storing events
+- Analyzing the data
+- Generating graphs
+
+I didn’t show the full steps for the analysis and graph generation because of the length but if you’re actively building this with Xano or some other tool, I’m happy to help. I’ve made the endpoint temporarily public so you can test it and generate a graph in real time if you like.
+
+There are a lot more steps to making this tool even better:
+
+- Fetching and updating data for the graphs in real time
+- Viewing multiple charts in groups
+- More chart types - Pie, donut, combo, funnel etc.
+
+> 📌 I won’t be covering them in this article but I’ll be working on building them out completely and making the full product available to try out. That may or may not include UI but you can expect an API doc.
+
+If you like building cool stuff for work and fun, my newsletter is the place to be. Subscribe [here](/mailing-list).

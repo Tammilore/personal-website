@@ -45,6 +45,7 @@
     "react-twitter-embed": "^4.0.4",
     "resend": "^1.1.0",
     "schema-dts": "^1.1.2",
+    "styled-components": "^6.1.6",
     "tailwind-merge": "^1.14.0",
     "tailwindcss-animate": "^1.0.7",
     "zod": "^3.22.4"
