@@ -12,6 +12,7 @@ import { Clients } from './components/clients';
 import Banner from './components/banner';
 import { Announcement } from './components/announcement';
 import type { AnnouncementProps } from './components/announcement';
+import SpotifyPlayer from './components/spotify';
 import type { Metadata } from 'next';
 import type { ReactElement } from 'react';
 
@@ -49,6 +50,7 @@ const Home = async (): Promise<ReactElement> => {
       {/* <Thoughts /> */}
       {/* {announcement2 ? <Announcement {...announcement} /> : null} */}
       {/* <Clients /> */}
+      <SpotifyPlayer />
       <Social />
     </>
   );
