@@ -17,7 +17,8 @@ export const ActiveProvider: FC<ActiveProviderProps> = ({
   const pathname = usePathname();
 
   // I use `startsWith` here to handle nested routes
-  const active = href === '/' ? pathname === href : pathname.startsWith(href);
+  const active =
+    href === '/' ? pathname === href : pathname && pathname.startsWith(href);
 
   return (
     <div
