@@ -1,4 +1,4 @@
 # Tamilore Lawal
 
-My personal website originally forked from (https://github.com/haydenbleasel/website) [Hayden Bleasel]
+My personal website originally forked from [Hayden Bleasel](https://github.com/haydenbleasel/website) 
 
