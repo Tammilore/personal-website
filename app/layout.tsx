@@ -46,10 +46,16 @@ const profileJsonLd = toJsonLd<Person>({
   },
   workLocation: {
     '@type': 'Place',
-    name: 'Lagos, Nigeria',
+    name: 'United Kingdom',
   },
   knowsLanguage: 'English',
-  knowsAbout: ['No-code Development', 'MERN', 'Product Management'],
+  knowsAbout: [
+    'No-code Development',
+    'MERN',
+    'Product Management',
+    'Typescript',
+    'Javascript',
+  ],
   nationality: {
     '@type': 'Country',
     name: 'Nigeria',
