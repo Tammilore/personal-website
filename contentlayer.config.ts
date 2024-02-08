@@ -121,9 +121,34 @@ export const Thoughts = defineDocumentType(() => ({
   computedFields: computeFields<'Thoughts'>({}),
 }));
 
+export const Eggs = defineDocumentType(() => ({
+  name: 'Eggs',
+  filePathPattern: `crazy-eggs/**/*.mdx`,
+  contentType: 'mdx',
+  fields: {
+    title: {
+      type: 'string',
+      required: true,
+    },
+    description: {
+      type: 'string',
+      required: false,
+    },
+    date: {
+      type: 'date',
+      required: true,
+    },
+    image: {
+      type: 'string',
+      required: false,
+    },
+  },
+  computedFields: computeFields<'Eggs'>({}),
+}));
+
 const source = makeSource({
   contentDirPath: './content',
-  documentTypes: [Blog, Work, App, Thoughts],
+  documentTypes: [Blog, Work, App, Thoughts, Eggs],
   mdx: {
     remarkPlugins: remarkPlugins(),
     rehypePlugins: rehypePlugins({

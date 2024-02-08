@@ -1,0 +1,17 @@
+[
+  {
+    "slug": "/crazy-eggs/look-who-learned-to-code",
+    "type": "crazy-eggs",
+    "reactions": 27
+  },
+  {
+    "slug": "/blog/mixpanel-style-analytics-for-unit-economics",
+    "type": "blog",
+    "reactions": 4
+  },
+  {
+    "slug": "/blog/how-to-build-a-delivery-api",
+    "type": "blog",
+    "reactions": 24
+  }
+]

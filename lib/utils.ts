@@ -1,6 +1,6 @@
 import { clsx } from 'clsx';
 import { twMerge } from 'tailwind-merge';
-import type { Blog, Work, Thoughts } from '@/.contentlayer/generated';
+import type { Blog, Work, Thoughts, Eggs } from '@/.contentlayer/generated';
 import type { Thing, WithContext } from 'schema-dts';
 import type { ClassValue } from 'clsx';
 
@@ -32,6 +32,11 @@ export const sortThoughtsPostByDate = (
   thoughtPostB: Thoughts
 ): number =>
   new Date(thoughtPostB.date).getTime() > new Date(thoughtPostA.date).getTime()
+    ? 1
+    : -1;
+
+export const sortEggsPostByDate = (eggsPostA: Eggs, eggsPostB: Eggs): number =>
+  new Date(eggsPostB.date).getTime() > new Date(eggsPostA.date).getTime()
     ? 1
     : -1;
 

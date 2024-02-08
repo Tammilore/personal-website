@@ -15,6 +15,7 @@ import { Link } from './link';
 import { Tooltip, TooltipContent, TooltipTrigger } from './ui/tooltip';
 import { ActiveProvider } from './active-provider';
 import type { FC } from 'react';
+import Egg from '/crazy-eggs/egg-false.png';
 
 const pages = [
   { name: 'Home', href: '/', icon: HomeIcon },
@@ -27,6 +28,8 @@ const pages = [
   // { name: 'Speaking', href: '/speaking', icon: CalendarIcon },
   // { name: 'Features', href: '/features', icon: GlobeIcon },
   { name: 'Contact', href: '/contact', icon: ChatBubbleIcon },
+  //Add nav for crazy eggs
+  // Add nav for code
 ];
 
 export const Navigation: FC = () => (
