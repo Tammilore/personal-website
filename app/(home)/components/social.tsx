@@ -9,7 +9,7 @@ const socialLinks = [
     image: '/social/x.svg',
   },
   {
-    href: 'https://github.com/',
+    href: 'https://github.com/Tammilore',
     name: 'GitHub',
     image: '/social/github.svg',
   },
