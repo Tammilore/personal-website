@@ -13,5 +13,10 @@
     "slug": "/blog/how-to-build-a-delivery-api",
     "type": "blog",
     "reactions": 24
+  },
+  {
+    "slug": "/blog/build-a-bnpl-product-with-mono",
+    "type": "blog",
+    "reactions": 2
   }
 ]

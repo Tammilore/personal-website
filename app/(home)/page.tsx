@@ -4,6 +4,7 @@ import { Work } from './components/work';
 import { Intro } from './components/intro';
 import { Hero } from './components/hero';
 import { Apps } from './components/apps';
+import { Code } from './components/code';
 import { Projects } from './components/projects';
 import { Blog } from './components/blog';
 import { Thoughts } from './components/thoughts';
@@ -45,6 +46,7 @@ const Home = async (): Promise<ReactElement> => {
       {/* <Intro /> */}
       <Work />
       <Apps />
+      <Code />
       {/* <Projects /> */}
       <Blog />
       {/* <Thoughts /> */}

@@ -9,6 +9,7 @@ import {
   Pencil2Icon,
   ReaderIcon,
   TokensIcon,
+  GitHubLogoIcon,
 } from '@radix-ui/react-icons';
 import { cn } from '@/lib/utils';
 import { Link } from './link';
@@ -25,6 +26,7 @@ const pages = [
   { name: 'Mailing List', href: '/mailing-list', icon: EnvelopeClosedIcon },
   // { name: 'Clients', href: '/clients', icon: AvatarIcon },
   { name: 'Apps', href: '/apps', icon: TokensIcon },
+  { name: 'Code', href: '/code', icon: GitHubLogoIcon },
   // { name: 'Speaking', href: '/speaking', icon: CalendarIcon },
   // { name: 'Features', href: '/features', icon: GlobeIcon },
   { name: 'Contact', href: '/contact', icon: ChatBubbleIcon },
