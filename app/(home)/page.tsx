@@ -17,8 +17,8 @@ import SpotifyPlayer from './components/spotify';
 import type { Metadata } from 'next';
 import type { ReactElement } from 'react';
 
-const title = 'Product Manager and No-code Developer';
-const description = 'Product Manager and No-code Developer';
+const title = 'Product Manager and Software Developer';
+const description = 'Product Manager and Software Developer';
 
 export const metadata: Metadata = createMetadata({
   title,
