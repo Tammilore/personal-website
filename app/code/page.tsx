@@ -5,7 +5,7 @@ import codes from '@/data/code.json';
 import type { FC } from 'react';
 
 const title = 'Code';
-const description = 'Open source projects.';
+const description = 'Open and closed source projects.';
 
 export const metadata = createMetadata({
   title,

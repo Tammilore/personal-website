@@ -7,7 +7,7 @@
   {
     "slug": "/blog/mixpanel-style-analytics-for-unit-economics",
     "type": "blog",
-    "reactions": 4
+    "reactions": 12
   },
   {
     "slug": "/blog/how-to-build-a-delivery-api",
@@ -18,5 +18,10 @@
     "slug": "/blog/build-a-bnpl-product-with-mono",
     "type": "blog",
     "reactions": 2
+  },
+  {
+    "slug": "/blog/export-code-for-your-bubble-app",
+    "type": "blog",
+    "reactions": 3
   }
 ]

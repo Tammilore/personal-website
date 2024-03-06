@@ -11,6 +11,17 @@
     }
   },
   {
+    "name": "Liber",
+    "description": "A better way to read",
+    "link": "https://liber.adalo.com/liber",
+    "featured": true,
+    "image": "/apps/liber.png",
+    "caption": {
+      "text": "active",
+      "link": ""
+    }
+  },
+  {
     "name": "Zing",
     "description": "Open finance APIs for African businesses.",
     "link": "https://www.zingfi.co/",
@@ -22,6 +33,17 @@
     }
   },
   {
+    "name": "Burst",
+    "description": "Export your Bubble application as code.",
+    "link": "/blog/export-code-for-your-bubble-app",
+    "image": "",
+    "featured": true,
+    "caption": {
+      "text": "experimental",
+      "link": ""
+    }
+  },
+  {
     "name": "Bloo",
     "description": "An inbound email routing and automation tool.",
     "link": "https://www.trybloo.co/",
@@ -30,16 +52,6 @@
     "caption": {
       "text": "experimental",
       "link": "https://www.trybloo.co/"
-    }
-  },
-  {
-    "name": "Boro",
-    "description": "Instant crypto-backed loans.",
-    "link": "/apps/boro",
-    "image": "/apps/boro.png",
-    "caption": {
-      "text": "doa",
-      "link": "/apps/boro"
     }
   },
   {
@@ -86,11 +98,11 @@
   {
     "name": "Viva",
     "description": "No-code widget for CAC business registrations.",
-    "link": "/apps/viva",
+    "link": "",
     "image": "/apps/viva.jpg",
     "caption": {
       "text": "discontinued",
-      "link": "/apps/viva"
+      "link": ""
     }
   },
   {
@@ -98,10 +110,20 @@
     "description": "All-in-one platform to find your perfect home and live your best life.",
     "link": "/apps/cluster",
     "image": "/apps/cluster.png",
-    "featured": true,
+    "featured": false,
     "caption": {
       "text": "discontinued",
       "link": "/apps/cluster"
+    }
+  },
+  {
+    "name": "Boro",
+    "description": "Instant crypto-backed loans.",
+    "link": "/apps/boro",
+    "image": "/apps/boro.png",
+    "caption": {
+      "text": "doa",
+      "link": "/apps/boro"
     }
   }
 ]

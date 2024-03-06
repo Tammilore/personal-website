@@ -1,8 +1,8 @@
 [
   {
-    "name": "Raggedy Ann",
-    "description": "Processor for your RAG applications",
-    "link": "",
+    "name": "Markdown Renderer",
+    "description": "Markdown renderer component for Adalo",
+    "link": "https://github.com/Tammilore/adalo-markdown-renderer",
     "featured": true,
     "image": "",
     "caption": {

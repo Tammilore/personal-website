@@ -4,7 +4,7 @@ import path from 'path';
 // obtains the path to the .json file
 const dataFilePath = path.join(process.cwd(), 'data/reactions.json');
 
-// obtains the data from the .json file
+// obtains the data from the .json filea
 const getData = () => {
   const data = fs.readFileSync(dataFilePath, 'utf8');
   return JSON.parse(data);

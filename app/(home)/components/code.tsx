@@ -6,7 +6,7 @@ import type { FC } from 'react';
 
 export const Code: FC = () => (
   <Section
-    title="Open Source"
+    title="Open (and closed) source"
     footer={
       <>
         <Link href="/code">Click here</Link> to see other projects.
