@@ -6,6 +6,7 @@ type MetadataGenerator = Omit<Metadata, 'description' | 'title'> & {
   description: string;
   path?: string;
   image?: string;
+  keywords?: string;
 };
 
 const applicationName = 'Tamilore Lawal';
@@ -21,6 +22,7 @@ export const createMetadata = ({
   description,
   path,
   image,
+  keywords,
   ...props
 }: MetadataGenerator): Metadata => {
   if (!process.env.NEXT_PUBLIC_SITE_URL) {
@@ -54,6 +56,7 @@ export const createMetadata = ({
         url: new URL(path ?? '/', process.env.NEXT_PUBLIC_SITE_URL).toString(),
       },
       publisher,
+      keywords,
       twitter: {
         card: 'summary_large_image',
         creator: twitterHandle,

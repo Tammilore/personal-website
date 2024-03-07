@@ -30,6 +30,10 @@ export const Blog = defineDocumentType(() => ({
       type: 'string',
       required: false,
     },
+    keywords: {
+      type: 'string',
+      required: false,
+    },
   },
   computedFields: computeFields<'Blog'>({}),
 }));

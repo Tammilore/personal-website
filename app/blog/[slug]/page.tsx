@@ -31,6 +31,7 @@ export const generateMetadata = ({ params }: DocPageProps): Metadata => {
     description: doc.description,
     path: doc.slug,
     image: doc.image,
+    keywords: doc.keywords,
   });
 };
 
