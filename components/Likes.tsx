@@ -1,8 +1,5 @@
 'use client';
 import { useEffect, useState } from 'react';
-import Image from 'next/image';
-import trueEgg from '../public/crazy-eggs/egg-true-reaction.png';
-import falseEgg from '../public/crazy-eggs/egg-false-reaction.png';
 
 const Likes = ({ slug, type }: any) => {
   const [count, setCount] = useState(0);
@@ -10,14 +7,16 @@ const Likes = ({ slug, type }: any) => {
 
   useEffect(() => {
     // Fetch the initial count on component mount
-    fetch(`/api/reactions?slug=${slug}&type=${type}`)
+    fetch(
+      `https://x8ki-letl-twmt.n7.xano.io/api:WXxopL0o/reactions?slug=${slug}&type=${type}`
+    )
       .then((response) => response.json())
       .then((data) => setCount(data.reactions));
   }, [slug, type]);
 
   const addReaction = () => {
     // Increase the count
-    fetch('/api/reactions', {
+    fetch('https://x8ki-letl-twmt.n7.xano.io/api:WXxopL0o/reactions', {
       method: 'POST',
       body: JSON.stringify({ slug, type }),
       headers: {

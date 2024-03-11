@@ -13,12 +13,12 @@
   {
     "name": "Liber",
     "description": "A better way to read",
-    "link": "https://liber.adalo.com/liber",
+    "link": "/blog/liber-a-better-way-to-read",
     "featured": true,
     "image": "/apps/liber.png",
     "caption": {
       "text": "active",
-      "link": ""
+      "link": "https://liber.adalo.com/demo"
     }
   },
   {
