@@ -6,7 +6,7 @@ export const Hero: FC = () => (
       Tamilore Lawal
     </p>
     <p className="m-0 text-neutral-600 dark:text-neutral-400 text-sm">
-      Product Manager and Software Developer
+      Product Manager and Software Engineer
     </p>
     <p className="m-0 text-neutral-600 dark:text-neutral-400 text-sm">
       United Kingdom
