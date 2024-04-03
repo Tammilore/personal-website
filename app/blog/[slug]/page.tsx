@@ -1,5 +1,5 @@
 import { notFound } from 'next/navigation';
-import { ArrowLeftIcon } from '@radix-ui/react-icons';
+import { ArrowLeftIcon, EyeOpenIcon } from '@radix-ui/react-icons';
 import Image from 'next/image';
 import { Link } from '@/components/link';
 import { allBlogs } from '@contentlayer/generated';
@@ -9,6 +9,7 @@ import { formatDate } from '@/lib/utils';
 import type { FC } from 'react';
 import type { Metadata } from 'next';
 import Likes from '@/components/Likes';
+import PageViewCounter from '@/components/Views';
 
 type DocPageProps = {
   readonly params: {
@@ -55,9 +56,6 @@ const DocPage: FC<DocPageProps> = ({ params }) => {
     images.push(imageUrl);
   }
 
-  const preview = doc.preview || '';
-  const rest = doc.body.code;
-
   return (
     <div className="flex flex-col gap-8">
       <div>
@@ -75,7 +73,10 @@ const DocPage: FC<DocPageProps> = ({ params }) => {
         </div>
         <p className="my-1 mb-0">{doc.description}</p>
         <p className="text-neutral-600 dark:text-neutral-400 text-xs mt-4">
-          Published on {formatDate(doc.date)} • {doc.readingTime}
+          <span style={{ display: 'inline-flex', alignItems: 'center' }}>
+            Published on {formatDate(doc.date)} • {doc.readingTime} • {'  '}
+            <PageViewCounter page={doc.slug} />
+          </span>
         </p>
       </div>
       {doc.image && doc.imageBlur ? (
