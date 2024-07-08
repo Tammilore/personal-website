@@ -1,12 +1,23 @@
 [
   {
     "name": "Sono",
-    "description": "Customizable living spaces",
+    "description": "Alternative and customizable living spaces",
     "link": "",
     "featured": true,
     "image": "",
     "caption": {
       "text": "Coming 202?",
+      "link": ""
+    }
+  },
+  {
+    "name": "Roofus",
+    "description": "A new way to rent",
+    "link": "",
+    "featured": true,
+    "image": "",
+    "caption": {
+      "text": "August 2024",
       "link": ""
     }
   },
@@ -28,7 +39,7 @@
     "featured": true,
     "image": "/apps/zing.svg",
     "caption": {
-      "text": "active",
+      "text": "discontinued",
       "link": "https://www.zingfi.co/"
     }
   },
