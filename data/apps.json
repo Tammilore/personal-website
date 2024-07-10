@@ -11,17 +11,6 @@
     }
   },
   {
-    "name": "Roofus",
-    "description": "A new way to rent",
-    "link": "",
-    "featured": true,
-    "image": "",
-    "caption": {
-      "text": "August 2024",
-      "link": ""
-    }
-  },
-  {
     "name": "Liber",
     "description": "A better way to read",
     "link": "/blog/liber-a-better-way-to-read",
